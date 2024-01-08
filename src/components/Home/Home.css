@@ -1,0 +1,197 @@
+@keyframes move-along-rhombus {
+
+    0%,
+    100% {
+        top: 50%;
+        left: 0%;
+        background-color: white;
+    }
+
+    25% {
+        top: 0%;
+        left: 50%;
+        opacity: 0;
+    }
+
+    50% {
+        top: 50%;
+        left: 100%;
+        background-color: white;
+    }
+
+    75% {
+        top: 100%;
+        left: 50%;
+        background-color: white;
+    }
+}
+
+.Home {
+    width: 100%;
+    padding: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Home__cards-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Home__cards-pic img {
+    width: 400px;
+}
+
+.rhombus-container {
+    position: relative;
+    width: 380px;
+    height: 240px;
+}
+
+.moving-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+.dot-one {
+    animation: move-along-rhombus 5s linear infinite;
+}
+
+.dot-two {
+    animation: move-along-rhombus 8s linear infinite;
+}
+
+.dot-three {
+    animation: move-along-rhombus 12s linear infinite;
+}
+
+.dot-four {
+    animation: move-along-rhombus 16s linear infinite;
+}
+
+.dot-five {
+    animation: move-along-rhombus 20s linear infinite;
+}
+
+.Home__cards {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin-top: -5px;
+}
+
+.HomeCard__info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.not-first {
+    border-left: 3px solid rgb(1, 30, 79);
+}
+
+.HomeCard__title,
+.HomeCard__text {
+    padding: 0 28px;
+}
+
+.HomeCard__text {
+    flex-grow: 1;
+    font-weight: 300;
+    color: rgb(1, 30, 79);
+}
+
+.HomeCard__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(7, 51, 117);
+}
+
+.HomeCard__text {
+    flex-grow: 1;
+    text-align: center;
+    color: rgb(17, 15, 11);
+}
+
+.HomeCard__btn-container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HomeCard__btn {
+    border: none;
+    background-color: rgb(7, 51, 117);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+
+}
+
+.HomeCard__btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%; 
+    height: 50%;
+    background: rgba(1, 30, 79, 0.5);
+    border: 1px solid rgba(7, 51, 117, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: none;
+}
+
+.HomeCard__btn:hover::after {
+    animation: wave-animation 0.8s ease-out infinite;
+}
+
+.HomeCard__btn:hover{
+    background-color:  rgb(1, 30, 79);
+}
+
+.HomeCard__btn:focus{
+    transform: scale(1.1);
+    transition:  0.5s ease;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(5); 
+        opacity: 0;
+    }
+}
+
+.HomeCard__btn-title {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(1, 30, 79);
+}
