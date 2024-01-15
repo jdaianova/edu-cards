@@ -8,17 +8,31 @@ import {
 
 const SocialIcons = () => {
   return (
-    <div className="SocialIcons"
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center",
-      }}
-    >
-      <FaEnvelope size={30} color="white" />
-      <FaInstagram size={28} color="white" />
-      <FaLinkedin size={28} color="white" />
-      <FaTelegramPlane size={29} color="white" />
+    <div className="SocialIcons">
+      <a href="mailto:jdaianova@gmail.com">
+        <FaEnvelope size={30} color="white" />
+      </a>
+      <a
+        href="https://www.instagram.com/julia_daianova?igsh=N3d0ODV1bXdpcGw0"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaInstagram size={28} color="white" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/julia-daianova/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin size={28} color="white" />
+      </a>
+      <a
+        href="https://t.me/IuliiaDaianova"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaTelegramPlane size={29} color="white" />
+      </a>
     </div>
   );
 };

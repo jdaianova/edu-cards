@@ -2,7 +2,7 @@
     "home": "Начало",
     "create": "Создавай!",
     "cards": "карточки",
-    "contacts": "Контакты",
+    "contacts": "контакты",
     "news": "Новости",
 
     "home_card_1_title": "Создавай и учи",
@@ -25,5 +25,23 @@
     
     "my_sets": "мои наборы",
     "ready_sets": "Готовые наборы",
-    "card_collections": "коллекции карточек"
+    "card_collections": "коллекции карточек",
+
+    "contact_us": "Напиши нам",
+    "thanks_for_rating": "Спасибо за оценку!",
+    "rating_your_name": "Имя (необязательно)",
+    "rating_your_comment": "Комментарий (необязательно)",
+    "contact_your_email": "email",
+    "contact_your_message": "сообщение",
+    "submit_btn": "отправить",
+    "thanks_for_mail_1": "Спасибо за сообщение!",
+    "thanks_for_mail_2": "Eсли вы указали свой емейл, мы на него ответим в ближайшее время!",
+
+    "tooltip_deployed": "обновление уже вышло",
+    "tooltip_not_deployed": "обновление планируется",
+    "update_lang_en": "на английском языке",
+    "update_lang_ru": "на русском языке",
+    "update date": "дата обновления:",
+    "view_sets": "посмотреть",
+    "close": "закрыть"
 }

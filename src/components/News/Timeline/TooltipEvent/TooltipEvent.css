@@ -1,0 +1,63 @@
+.TooltipEvent {}
+
+.tooltip {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    text-align: center;
+}
+
+.tooltip h3 {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px dotted rgba(7, 15, 11, 1);
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+
+.tooltip-maximize {
+    width: 220px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip-maximize h3 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted rgba(7, 15, 11, 1);
+    padding-bottom: 10px;
+    color: rgba(7, 15, 11, 1);
+}
+
+.tooltip-maximize h6 {
+    font-size: 10px;
+    font-weight: 700;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+
+.tooltip-maximize span {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.tooltip-maximize p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.TooltipEvent button {
+    width: 80%;
+    padding: 5px;
+    font-size: 10px;
+    margin-top: 10px;
+}

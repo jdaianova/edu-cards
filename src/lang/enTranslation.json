@@ -2,7 +2,7 @@
     "home": "Home",
     "create": "create!",
     "cards": "cards",
-    "contacts": "Contacts",
+    "contacts": "support",
     "news": "news",
 
     "home_card_1_title": "Create and Learn",
@@ -25,5 +25,23 @@
 
     "my_sets": "my sets",
     "ready_sets": "ready sets",
-    "card_collections": "card collections"
+    "card_collections": "card collections",
+
+    "contact_us": "Contact us",
+    "thanks_for_rating": "Thank you for your feedback!",
+    "rating_your_name": "Your Name (optional)",
+    "rating_your_comment": "Your Comment (optional)",
+    "contact_your_email": "Your email",
+    "contact_your_message": "Your message",
+    "submit_btn": "send",
+    "thanks_for_mail_1": "Thank you for your message!",
+    "thanks_for_mail_2": "If you have provided your email, we will respond as soon as possible!",
+
+    "tooltip_deployed": "update already released",
+    "tooltip_not_deployed": "update planned",
+    "update_lang_en": "in English",
+    "update_lang_ru": "in Russian",
+    "update date": "update date:",
+    "view_sets": "view sets",
+    "close": "close"
 }

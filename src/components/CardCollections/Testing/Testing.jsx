@@ -1,50 +1,54 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import TestCardAnimation from './TestCardAnimation/TestCardAnimation';
+import "./Testing.css";
 
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
+
+import TestCardAnimation from "./TestCardAnimation/TestCardAnimation";
+
+import  getQuestionWord  from "../../../utils/getQuestionWord";
 
 const Testing = () => {
   const location = useLocation();
   const { set } = location.state || {};
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [startTesting, setStartTesting] = useState(true);
-
-  const handleAnswerSubmit = (userAnswer) => {
-    if (userAnswer === set.set_cards[currentQuestionIndex].answer) {
-      setCorrectAnswers(correctAnswers + 1);
-    }
-
-    if (currentQuestionIndex < set.set_cards.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
-      console.log(`Тест завершен. Правильных ответов: ${correctAnswers}`);
-    }
-  };
+  const [incorrectAnswers, setInorrectAnswers] = useState(0);
+  const [startTesting, setStartTesting] = useState(false);
 
   return (
     <div className="Testing-container">
+      <div className="Testing__title">
+        <h4>{set.set_title}</h4>
+        <div className="Testing__title-number-of-questions">
+          {set.set_cards.length || 0}
+          {getQuestionWord(set.set_cards.length || 0)}
+        </div>
+        <div className="Testing__title__score">
+          <div className="Testing__title__score-correct">{correctAnswers}</div>
+          <div className="Testing__title__score-incorrect">
+            {incorrectAnswers}
+          </div>
+        </div>
+      </div>
       {!startTesting && (
         <div className="Testing-start">
           <div>rules</div>
           <button onClick={() => setStartTesting(true)}>start</button>
         </div>
       )}
-      {startTesting && (
+      {startTesting && currentQuestionIndex < set.set_cards.length && (
         <div className="Testing">
-          <h4 className="Testing-title">{set.set_title}</h4>
           {set.instructions && (
             <div className="Testing-instructions">{set.instructions}</div>
           )}
-          <div className="Testing-score">
-            всего вопросов: {set.set_cards.length}
-            верных: {correctAnswers}
-          </div>
-          <div className="Testing-timer">time:</div>
           <div className="Testing-cards">
             <TestCardAnimation
-              question={set.set_cards[currentQuestionIndex].question}
-              onAnswerSubmit={handleAnswerSubmit}
+              currentcCardInfo={set.set_cards[currentQuestionIndex]}
+              numberOfCards={set.set_cards.length}
+              setCurrentQuestionIndex={setCurrentQuestionIndex}
+              setCorrectAnswers={setCorrectAnswers}
+              setInorrectAnswers={setInorrectAnswers}
             />
           </div>
         </div>

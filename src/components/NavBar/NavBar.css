@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 35px;
+    height: 30px;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
@@ -24,7 +24,7 @@
     transition: background-position 0.8s ease, color 0.5s ease;
     cursor: pointer;
     text-decoration: none;
-    color: #020a14; 
+    color: #020a14;
 }
 
 .NavBar-element:hover {
@@ -33,6 +33,23 @@
 }
 
 .NavBar-element_active {
-    background-color: white;
-    color: #020a14; 
+    background-color: transparent;
+    outline: 2px solid rgba(255, 255, 255, 1);
+}
+
+
+@media screen and (max-width: 480px) {
+    .NavBar {
+        margin-right: 0px;
+    }
+
+    .NavBar nav {
+        justify-content: space-between;
+    }
+
+    .NavBar-element {
+        width: 60px;
+        height: 25px;
+        font-size: 10px;
+    }
 }

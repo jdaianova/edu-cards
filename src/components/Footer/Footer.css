@@ -19,6 +19,12 @@
     font-weight: 400;
 }
 
+.Footer__themes-btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .Footer__themes button {
     display: flex;
     align-items: center;
@@ -48,4 +54,14 @@
 .Footer__themes .Footer__themes-btn_active {
     background-color: #020a14;
     color: white; 
+}
+
+@media screen and (max-width: 480px) {
+    .Footer__themes {
+        flex-direction: column;
+    }
+
+    .Footer__themes-btns {
+        margin-top: 10px;
+    }
 }

@@ -1,53 +1,87 @@
 import { useState } from "react";
 import "./TestCardAnimation.css";
+import TestingCard from "../TestingCard/TestingCard";
+import { useNavigate } from "react-router";
 
-const TestCardAnimation = ({ question, onAnswerSubmit }) => {
+const TestCardAnimation = ({
+  currentcCardInfo,
+  numberOfCards,
+  setCurrentQuestionIndex,
+  setCorrectAnswers,
+  setInorrectAnswers,
+}) => {
+  const navigate = useNavigate();
   const [changeCards, setChangeCards] = useState(false);
-  const [answer, setAnswer] = useState("");
+  const [leftDeck, setLeftDeck] = useState(numberOfCards);
+  const [rightDeck, setrightDeck] = useState(0);
+  const [endTest, setEndTest] = useState(false);
 
-  const handleSubmit = () => {
-    onAnswerSubmit(answer);
-    setAnswer("");
+  const handleNextCard = () => {
     setChangeCards(true);
-    setTimeout(() => {
-      setChangeCards(false);
-    }, 1000);
+
+    if (leftDeck <= 1) {
+      setEndTest(true);
+    } else {
+      setLeftDeck((prev) => prev - 1);
+      setTimeout(() => {
+        setChangeCards(false);
+        setrightDeck((prevRightDeck) => prevRightDeck + 1);
+        setCurrentQuestionIndex((prev) => prev + 1);
+      }, 1000);
+    }
+  };
+
+  const handleEndTest = () => {
+    navigate("/collections/sets");
   };
 
   return (
     <div className="TestCardAnimation">
-      <div className="TestCardAnimation__card-container">
-        <div className="cards-deck"></div>
-        <div
-          className={`TestCardAnimation__card card-one ${
-            changeCards ? "animateLeftCard" : ""
-          }`}
-        ></div>
-      </div>
-      <div className="TestCardAnimation__card-container">
-        <div
-          className={`TestCardAnimation__card card-two ${
-            changeCards ? "animateCard" : ""
-          }`}
-        >
-          <div
-            className="TestCardAnimation__card-content"
-            style={changeCards ? { display: "none" } : {}}
-          >
-            <p>{question}</p>
-            <input
-              type="text"
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
-              placeholder="Введите ваш ответ"
-            />
-            <button onClick={handleSubmit}>"ok"</button>
-          </div>
+      {endTest ? (
+        // часть с сообщением о завершении теста
+        <div className="TestCardAnimation__card-content">
+          <p>тест завершен</p>
+          <button onClick={handleEndTest}>пройти другой тест</button>
         </div>
-      </div>
-      <div className="TestCardAnimation__card-container">
-        <div className="TestCardAnimation__card card-tree"></div>
-      </div>
+      ) : (
+        // часть с карточками
+        <>
+          <div className="TestCardAnimation__card-container">
+            {leftDeck > 0 && <div className="left-cards-deck App-dark"></div>}
+            <div
+              className={`TestCardAnimation__card card-one ${
+                changeCards ? "animateLeftCard" : ""
+              }`}
+            ></div>
+          </div>
+          <div className="TestCardAnimation__card-container">
+            <div
+              className={`TestCardAnimation__card card-two ${
+                changeCards ? "animateCard" : ""
+              }`}
+            >
+              {leftDeck > 0 && (
+                <div
+                  className="TestCardAnimation__card-content"
+                  style={changeCards ? { display: "none" } : {}}
+                >
+                  <TestingCard
+                    currentcCardInfo={currentcCardInfo}
+                    handleNextCard={handleNextCard}
+                    setCorrectAnswers={setCorrectAnswers}
+                    setInorrectAnswers={setInorrectAnswers}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="TestCardAnimation__card-container">
+            {!(rightDeck === 0) && (
+              <div className="right-cards-deck App-dark"></div>
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };

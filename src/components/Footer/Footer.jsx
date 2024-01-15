@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import "./Footer.css";
 import { ThemeContext } from "../ThemeContext";
 import SocialIcons from "./SocialIcons/SocialIcon";
@@ -13,6 +13,7 @@ const Footer = () => {
     <div className="Footer">
       <div className="Footer__themes">
         <p>{t("choosing_theme")}</p>
+        <div className="Footer__themes-btns">
         {themes.map((themeName) => (
           <button
             key={themeName}
@@ -22,6 +23,7 @@ const Footer = () => {
             {themeName}
           </button>
         ))}
+        </div>
       </div>
 
       <SocialIcons />

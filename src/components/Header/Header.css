@@ -1,9 +1,9 @@
 .Header {
-    padding: 30px;
+    padding: 10px;
     background: transparent;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 }
 
@@ -14,18 +14,44 @@
 
 .Header__lang button {
     width: 35px;
-    height: 35px;
+    height: 30px;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    color: #020a14; 
+    color: #020a14;
     border: none;
 }
 
 .Header__lang:hover button {
-    color: rgb(255,255,255); 
+    color: rgb(255, 255, 255);
     background-color: #020a14;
+}
+
+@media screen and (max-width: 480px) {
+    .Header {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 25px;
+    }
+
+    .Header__logo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .Header__menu {
+        width: 100%;
+    }
+
+    .Header__lang button {
+        width: 30px;
+        height: 25px;
+    }
 }

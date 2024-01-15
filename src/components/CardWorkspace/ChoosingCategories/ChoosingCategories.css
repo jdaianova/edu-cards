@@ -1,0 +1,22 @@
+.ChoosingCategories {
+    display: flex;
+    flex-direction: column;
+}
+
+.ChoosingCategories__select {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.ChoosingCategories__add-new-category {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.ChoosingCategories__add-category {
+    padding: 5px;
+}
+
+.ChoosingCategories__add-category:focus {
+    outline: 1px solid rgba(17, 15, 11, 1);
+}

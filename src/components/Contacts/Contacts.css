@@ -1,0 +1,57 @@
+.Contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Contacts h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.successMessage {
+  animation: fadeIn 1s ease-out;
+  font-size: 20px;
+  color: gold;
+  text-align: center;
+  padding: 20px;
+}
+
+.confirmation {
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+.confirmation p {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.confirmation span {
+  width: 80%;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+  .Contacts h2 {
+    margin-top: 0px;
+  }
+}

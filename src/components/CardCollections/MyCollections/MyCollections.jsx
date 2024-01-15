@@ -1,9 +1,29 @@
-import './MyCollections.css'
+import { useEffect, useState } from "react";
+import "./MyCollections.css";
+import { mySetsUseCards } from "../../../db/db";
+import ShowSets from "../ShowSets/ShowSets";
 
 const MyCollections = () => {
-  return (
-    <div className='MyCollections'>MyCollections</div>
-  )
-}
+  const [mySets, setMySets] = useState([]);
 
-export default MyCollections
+  useEffect(() => {
+    loadMySets();
+  }, []);
+
+  const loadMySets = async () => {
+    const fetchSets = await mySetsUseCards.sets.toArray();
+    setMySets(fetchSets);
+  };
+
+  const handleSetDelete = () => {
+    loadMySets(); // Перезагрузка списка после удаления
+  };
+
+  return (
+    <div className="Sets-container">
+      <ShowSets sets={mySets} isReadySets={false} onSetDelete={handleSetDelete} />
+    </div>
+  );
+};
+
+export default MyCollections;

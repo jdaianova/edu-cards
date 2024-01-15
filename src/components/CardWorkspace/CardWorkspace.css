@@ -1,7 +1,40 @@
 .CardWorkspace {
-    width: 100%;
-    background-color: white;
+    border-radius: 5px;
     flex-grow: 1;
-    content:'';
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.CardWorkspace__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CardWorkspace__title h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 10px;
+}
+
+.CardWorkspace__title button {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgba(17, 15, 11, 1);
+    padding: 2px 30px;
+}
+
+.CardWorkspace__properties, .CardWorkspace__cards {
+    background-color: rgba(17, 15, 11, 0.3);
+    padding: 20px;
+}
+
+.CardWorkspace__cards {
+    margin-top: 10px;
 }

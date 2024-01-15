@@ -1,0 +1,15 @@
+.News {
+    min-width: 769px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.News h5 {
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+}

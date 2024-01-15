@@ -1,0 +1,38 @@
+.TestingCard {
+    padding: 20px;
+}
+
+.TestingCard-question {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.TestingCard__options {
+
+}
+
+.TestingCard__option {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    background-color: rgba(7, 51, 117, 0.1);
+    border: none;
+}
+
+.TestingCard__option.selected {
+    background-color: red;
+    color: white;
+  }
+  
+
+  .TestingCard__option.correct {
+    background-color: green;
+    color: white;
+  }
+  
+  .TestingCard__option.incorrect {
+    background-color: red;
+    color: white;
+  }
+  

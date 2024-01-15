@@ -1,9 +1,13 @@
-import './News.css'
+import "./News.css";
+import Timeline from "./Timeline/Timeline";
 
 const News = () => {
   return (
-    <div>News</div>
-  )
-}
+    <div className="News">
+      <h5>2023</h5>
+      <Timeline />
+    </div>
+  );
+};
 
-export default News
+export default News;

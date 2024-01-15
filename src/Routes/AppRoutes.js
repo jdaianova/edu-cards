@@ -6,7 +6,7 @@ import CardCollections from '../components/CardCollections/CardCollections';
 import Contacts from '../components/Contacts/Contacts';
 import News from '../components/News/News';
 import MyCollections from '../components/CardCollections/MyCollections/MyCollections';
-import Sets from '../components/CardCollections/Sets/Sets';
+import Sets from '../components/CardCollections/ReadySets/ReadySets';
 import Testing from '../components/CardCollections/Testing/Testing';
 import Learning from '../components/CardCollections/Learning/Learning';
 

@@ -1,0 +1,51 @@
+.circle {
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    margin-bottom: 55px;
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.circle-not-deploy {
+    background-color: rgba(1, 30, 79, 1);
+    border: 1px dotted rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 100;
+    color: black;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.tooltip-maximize {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}

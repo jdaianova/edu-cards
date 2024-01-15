@@ -1,0 +1,83 @@
+.CardStack {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+    padding: 5px;
+}
+
+.CardStack:hover .CardStack-card {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.CardStack__card {
+    width: 100px;
+    height: 120px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-top: -110px;
+    transition: margin-top 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.CardStack__card-btn {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3px 20px 7px 5px;
+    transform: rotate(3deg); 
+}
+
+.CardStack__card-btn.expanded {
+    transform: rotate(0deg);
+    transition: 0.5s ease;
+    padding: 3px 10px;
+}
+
+.CardStack__card-btn button {
+    background-color: transparent;
+    border: none;
+    font-size: 10px;
+    padding: 3px;
+}
+
+.CardStack__card-btn button:hover {
+    transform: scale(1.1);
+}
+
+.CardStack__card-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    flex-grow: 1;
+    color: rgba(1, 30, 79, 1);
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.CardStack__card:first-child {
+    transform: rotate(-5deg);
+}
+
+.CardStack__card:nth-child(2) {
+    transform: rotate(0deg);
+}
+
+.CardStack__card:nth-child(3) {
+    transform: rotate(5deg);
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.CardStack.expanded .CardStack__card {
+    margin-top: -95px;
+    transform: rotate(0deg);
+}
