@@ -18,9 +18,14 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 import './db/db';
+import useWindowHeight from "./utils/useWindowHeight";
 
 function App() {
   const { theme } = useContext(ThemeContext);
+  const windowHeight = useWindowHeight();
+  document.documentElement.style.setProperty('--window-height', `${useWindowHeight()}px`);
+
+  useWindowHeight();
 
   return (
     <div className={`App App-${theme}`}>

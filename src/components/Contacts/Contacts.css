@@ -55,3 +55,9 @@
     margin-top: 0px;
   }
 }
+
+@media screen and (max-height: 850px) {
+  .Contacts {
+    background-color: red;
+  }
+}

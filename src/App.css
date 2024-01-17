@@ -12,7 +12,7 @@ a {
 
 .App {
     width: 100vw;
-    height: 100vh;
+    height: var(--window-height);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -60,5 +60,11 @@ button:hover {
 
     .App-sea {
         background-image: url('./data//img/sea-theme-mobile.png');
+    }
+}
+
+@media screen and (max-height: 850px) {
+    .App {
+        height: 850px;
     }
 }
