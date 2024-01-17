@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/edu-cards/static/css/main.d0c1703f.css",
-    "main.js": "/edu-cards/static/js/main.c6b3413f.js",
+    "main.css": "/edu-cards/static/css/main.4054e784.css",
+    "main.js": "/edu-cards/static/js/main.ca44090a.js",
     "static/media/sea-theme.png": "/edu-cards/static/media/sea-theme.a857c44e9fb2b3c96b79.png",
     "static/media/cards-home-pic2.png": "/edu-cards/static/media/cards-home-pic2.342980b86a700ee78f4b.png",
+    "static/media/sea-theme-mobile.png": "/edu-cards/static/media/sea-theme-mobile.7faf7ca2514123bcd299.png",
     "static/media/roboto-latin-400-italic.woff2": "/edu-cards/static/media/roboto-latin-400-italic.e10742dbb1d4a0864ba8.woff2",
     "static/media/roboto-cyrillic-ext-400-italic.woff2": "/edu-cards/static/media/roboto-cyrillic-ext-400-italic.87b2e75b34538b84c9ae.woff2",
     "static/media/roboto-latin-400-italic.woff": "/edu-cards/static/media/roboto-latin-400-italic.0200835661b868c7980d.woff",
@@ -103,11 +104,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/edu-cards/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/edu-cards/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/edu-cards/index.html",
-    "main.d0c1703f.css.map": "/edu-cards/static/css/main.d0c1703f.css.map",
-    "main.c6b3413f.js.map": "/edu-cards/static/js/main.c6b3413f.js.map"
+    "main.4054e784.css.map": "/edu-cards/static/css/main.4054e784.css.map",
+    "main.ca44090a.js.map": "/edu-cards/static/js/main.ca44090a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0c1703f.css",
-    "static/js/main.c6b3413f.js"
+    "static/css/main.4054e784.css",
+    "static/js/main.ca44090a.js"
   ]
 }
