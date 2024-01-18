@@ -1,2 +1,1 @@
-test
-test3
+https://jdaianova.github.io/edu-cards/
