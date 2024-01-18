@@ -41,6 +41,7 @@
 @media screen and (max-width: 480px) {
     .NavBar {
         margin-right: 0px;
+        margin-top: 7px;
     }
 
     .NavBar nav {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ChoosingCategories from "../ChoosingCategories/ChoosingCategories";
 import "./NewSetProperties.css";
-import { mySetsUseCards } from "../../../db/db";
+//import { mySetsUseCards } from "../../../db/db";
 
 const NewSetProperties = ({ setId }) => {
   const [title, setTitle] = useState("");
@@ -12,13 +12,13 @@ const NewSetProperties = ({ setId }) => {
   const updateInstructions = (e) => setInstructions(e.target.value);
   const updateLang = (newLang) => setLang(newLang);
 
-  const updateSetInDb = async () => {
-    await mySetsUseCards.sets.update(setId, {
-      set_title: title,
-      lang: lang,
-      instructions: instructions,
-    });
-  };
+  // const updateSetInDb = async () => {
+  //   await mySetsUseCards.sets.update(setId, {
+  //     set_title: title,
+  //     lang: lang,
+  //     instructions: instructions,
+  //   });
+  // };
 
   return (
     <div className="NewSetProperties">
@@ -31,7 +31,7 @@ const NewSetProperties = ({ setId }) => {
         />
       </div>
       <div className="NewSetProperties__categories">
-        <label>choose category</label>
+        <label>choose category {lang}</label>
         <ChoosingCategories />
       </div>
       <div className="NewSetProperties__lang">

@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto";
-    font-weight: 400;
 }
 
 a {
@@ -63,7 +62,7 @@ button:hover {
     }
 }
 
-@media screen and (max-height: 850px) {
+@media screen and (max-height: 850px)  {
     .App {
         height: 850px;
     }

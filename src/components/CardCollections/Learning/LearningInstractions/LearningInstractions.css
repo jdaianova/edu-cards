@@ -1,0 +1,31 @@
+.LearningInstractions {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+}
+
+.LearningInstractions__swipe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.LearningInstractions__swipe-bulb,
+.LearningInstractions__swipe-left,
+.LearningInstractions__swipe-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.LearningInstractions__swipe-bulb p {
+    margin-left: 3px;
+}

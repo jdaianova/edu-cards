@@ -2,8 +2,10 @@ import { useState } from "react";
 import "./CardStack.css";
 import { useNavigate } from "react-router-dom";
 import { mySetsUseCards } from "../../../../db/db";
+import { MdDeleteForever } from "react-icons/md";
+import { RiFileEditFill } from "react-icons/ri";
 
-const CardStack = ({ set, isReadySets, onSetDelete}) => {
+const CardStack = ({ set, isReadySets, onSetDelete }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
 
@@ -39,17 +41,26 @@ const CardStack = ({ set, isReadySets, onSetDelete}) => {
         >
           {isExpanded && "learn"}
         </div>
-        
+
         <div className="CardStack__card">
           <div className="CardStack__card-title">{set.set_title}</div>
+          {!isReadySets && (
+            <div
+              className={`CardStack__card-btn ${isExpanded ? "expanded" : ""}`}
+            >
+              <button className="CardStack__card-btn-edit">
+                <RiFileEditFill size={28} color={"rgba(152, 220, 152)"} />
+              </button>
+              <button
+                className="CardStack__card-btn-delete"
+                onClick={handleDeleteSet}
+              >
+                <MdDeleteForever size={33} color={"rgba(255, 180, 180)"} />
+              </button>
+            </div>
+          )}
         </div>
       </div>
-      {!isReadySets && (
-        <div className={`CardStack__card-btn ${isExpanded ? "expanded" : ""}`}>
-          <button>edit</button>
-          <button onClick={handleDeleteSet}>delete</button>
-        </div>
-      )}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./ChoosingCategories.css";
 import { mySetsUseCards, readySetsUseCards } from "../../../db/db";
 
@@ -21,17 +21,17 @@ const ChoosingCategories = () => {
     setIsAddingNew(true);
   };
 
-  const handleConfirmClick = () => {
-    if (isAddingNew) {
-      console.log("Добавлена новая категория:", newCategory);
-      // Добавление новой категории в базу данных
-    } else {
-      // Обработка выбранной категории
-      console.log("Выбрана категория:", newCategory);
-    }
-    setIsAddingNew(false);
-    setNewCategory("");
-  };
+  // const handleConfirmClick = () => {
+  //   if (isAddingNew) {
+  //     console.log("Добавлена новая категория:", newCategory);
+  //     // Добавление новой категории в базу данных
+  //   } else {
+  //     // Обработка выбранной категории
+  //     console.log("Выбрана категория:", newCategory);
+  //   }
+  //   setIsAddingNew(false);
+  //   setNewCategory("");
+  // };
 
   const handleCategoryChange = (e) => {
     setNewCategory(e.target.value);
