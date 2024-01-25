@@ -1,0 +1,37 @@
+.CreateCard {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(17, 15, 11);
+    padding: 20px 20px 0 20px;
+}
+
+.CreateCard input {
+    width: 100%;
+    border: none;
+    background-color: rgba(75, 186, 234, 0.1);
+    padding: 10px;
+    color: rgb(17, 15, 11);
+}
+
+.CreateCard label {
+    margin-bottom: 5px;
+}
+
+.CreateCard__section {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CreateCard__section-options {
+    display: flex;
+    flex-direction: column;
+gap: 10px;
+}
+
+.CreateCard__section-options input {
+
+}

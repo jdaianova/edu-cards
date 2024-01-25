@@ -1,0 +1,15 @@
+.CreateCards {
+    margin-top: -20px;
+}
+
+.CreateCards__cards-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.CreateCards__cards-btns button {
+    width: 140px;
+    padding: 5px;
+    margin-top: 10px;
+}

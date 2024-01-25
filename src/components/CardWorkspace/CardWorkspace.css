@@ -4,41 +4,86 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 30px;
-    margin-top: 20px;
+    justify-content: space-between;
+    padding: 30px;
     color: rgba(255, 255, 255, 1);
+    min-height: 500px;
+}
+
+.CardWorkspace__title {
+    text-align: center;
+}
+
+.CardWorkspace h5 {
+    width: 80%;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.CardWorkspace p {
+    width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.CardWorkspace span {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: -15px;
 }
 
 .CardWorkspace__title {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .CardWorkspace__title h3 {
     text-transform: uppercase;
     font-size: 25px;
     color: rgba(255, 255, 255, 1);
-    margin-bottom: 10px;
 }
 
-.CardWorkspace__title button {
-    margin-top: 10px;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: rgba(17, 15, 11, 1);
-    padding: 2px 30px;
+.CardWorkspace__form {
+    min-width: 300px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.CardWorkspace__properties, .CardWorkspace__cards {
-    background-color: rgba(17, 15, 11, 0.3);
-    padding: 20px;
+.CardWorkspace__form__btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 20px;
 }
 
-.CardWorkspace__cards {
-    margin-top: 10px;
+.CardWorkspace__form__btns button {
+    padding: 8px 30px;
 }
 
-@media screen and (max-width: 480px) {
-    
+.form-element-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
 }
+
+.form-element-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 480px) {}

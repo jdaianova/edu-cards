@@ -1,51 +1,50 @@
 import { useState } from "react";
 import "./CardWorkspace.css";
-import { mySetsUseCards } from "../../db/db";
-import { nanoid } from "nanoid";
-import NewSetProperties from "./NewSetProperties/NewSetProperties";
-import CreateCards from "./CreateCards/CreateCards";
+import SetTitle from "./FormElements/SetTitle/SetTitle";
+import ChoosingCategories from "./FormElements/ChoosingCategories/ChoosingCategories";
+import ChoosingLang from "./FormElements/ChoosingLang/ChoosingLang";
+import SetInstructions from "./FormElements/SetInstructions/SetInstructions";
+import CreateCards from "./FormElements/CreateCards/CreateCards";
+import { useTranslation } from "react-i18next";
 
-const CardWorkspace = ({ isEditing = false, editingSetId }) => {
-  const [creating, setCreating] = useState(false);
-  const [currentSetId, setCurrentSetId] = useState(null);
+const CardWorkspace = () => {
+  const { t } = useTranslation();
+  const [stepOfCreation, setStepOfCreation] = useState(
+    parseInt(localStorage.getItem("currentStep")) || 1
+  );
 
-  const startCreating = async () => {
-    try {
-      const currentDate = new Date().toISOString().split("T")[0];
-      const newSetId = nanoid();
-      setCurrentSetId(newSetId);
-      const newSet = {
-        set_id: newSetId,
-        set_title: "",
-        date_of_create: currentDate,
-        lang: "",
-        category: "",
-        instructions: "",
-        set_cards: [],
-      };
-      await mySetsUseCards.sets.add(newSet);
-      setCreating(true);
-    } catch (error) {}
+  const nextStep = () => {
+    setStepOfCreation((prev) => prev + 1);
+    localStorage.setItem("currentStep", stepOfCreation + 1);
+  };
+
+  const prevStep = () => {
+    setStepOfCreation((prev) => prev - 1);
+    localStorage.setItem("currentStep", stepOfCreation - 1);
   };
 
   return (
     <div className="CardWorkspace">
       <div className="CardWorkspace__title">
-        <h3>{!isEditing ? "create new set" : "edit set"}</h3>
-        {!creating && !isEditing && (
-          <button onClick={startCreating}>start</button>
+        <h3>{t("create_new_set")}</h3>
+      </div>
+      <div className="CardWorkspace__form">
+        {stepOfCreation === 1 && (
+          <SetTitle nextStep={nextStep} prevStep={prevStep} />
+        )}
+        {stepOfCreation === 2 && (
+          <ChoosingCategories nextStep={nextStep} prevStep={prevStep} />
+        )}
+        {stepOfCreation === 3 && (
+          <ChoosingLang nextStep={nextStep} prevStep={prevStep} />
+        )}
+        {stepOfCreation === 4 && (
+          <SetInstructions nextStep={nextStep} prevStep={prevStep} />
+        )}
+        {stepOfCreation === 5 && (
+          <CreateCards nextStep={nextStep} prevStep={prevStep} />
         )}
       </div>
-      {(creating || isEditing) && (
-        <div className="CardWorkspace__creating">
-          <div className="CardWorkspace__properties">
-            <NewSetProperties setId={currentSetId} />
-          </div>
-          <div className="CardWorkspace__cards">
-            <CreateCards setId={currentSetId} />
-          </div>
-        </div>
-      )}
     </div>
   );
 };
