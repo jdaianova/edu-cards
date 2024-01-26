@@ -1,6 +1,6 @@
 {
     "home": "Начало",
-    "create": "Создавай!",
+    "create": "Создать!",
     "cards": "карточки",
     "contacts": "контакты",
     "news": "Новости",
@@ -48,9 +48,35 @@
     "create_new_set": "создание карточек",
     "create_btn_back": "назад",
     "create_btn_forward": "далее",
+    "create_duty": "(необязательно заполнять)",
     "error_more_simbols": "Превышено ограничение по длине.",
     "error_empty": "Поле названия не может быть пустым.",
+    "create_btn_new_set": "закончить и сохранить набор",
+
     "set_title_head_text": "введите название",
-    "set_title_text": "Ваше название должно быть не пустым и длиной не более 50 символов."
+    "set_title_text": "Ваше название должно быть не пустым и длиной не более 50 символов.",
+
+    "choose_category_head_text": "выберите категорию",
+    "choose_category_text": "Чтобы воспользоваться поиском, введите первые сиимволы или напишите новую категорию (не более 30 символов):",
+    "choose_category_placeholder": "введите или выберите категорию...",
+
+    "choose_lang_head_text": "выберите язык",
+    "choose_lang_text": "На каком языке будет ваш набор карточек?",
+
+    "set_instructions_head_text": "введите инструкции",
+    "set_instructions_text": "Ваши инструкции не должны превышать 200 символов.",
+    "set_instructions_placeholder": "введите инструкции к набору карточек",
+
+    "create_cards_text": "Ваши вопрос и ответы не должны превышать 100 символов.",
+    "create_cards_question": "вопрос",
+    "create_cards_question_placeholder": "введите вопрос",
+    "create_cards_answer": "правильный ответ",
+    "create_cards_answer_placholder": "введите ответ",
+    "create_cards_answer_choices": "варианты ответов для теста:",
+    "create_cards_answer_choices_placholder": "введите вариант",
+    "create_cards_prev_card": "предыдущая карточка",
+    "create_cards_next_card": "следующая карточка",
+    "create_cards_new_card": "создать карточку"
+
 
 }

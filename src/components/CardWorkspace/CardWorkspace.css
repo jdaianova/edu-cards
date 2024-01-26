@@ -24,7 +24,8 @@
 }
 
 .CardWorkspace p {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     font-size: 15px;
     font-weight: 300;
     text-align: center;
@@ -35,7 +36,8 @@
     font-size: 12px;
     font-weight: 300;
     text-align: center;
-    margin-top: -15px;
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 .CardWorkspace__title {

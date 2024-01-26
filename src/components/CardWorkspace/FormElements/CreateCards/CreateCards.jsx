@@ -5,8 +5,11 @@ import { nanoid } from "nanoid";
 import { mySetsUseCards } from "../../../../db/db";
 import { useNavigate } from "react-router-dom";
 import { clearAfterCreateNewSet } from "../../../../localStorage/helpers";
+import { useTranslation } from "react-i18next";
 
 const CreateCards = ({ prevStep }) => {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   const initialCard = { question: "", answer: "", options: ["", "", "", ""] };
 
@@ -39,7 +42,7 @@ const CreateCards = ({ prevStep }) => {
     try {
       await mySetsUseCards.sets.bulkPut([newSet]);
       clearAfterCreateNewSet();
-    } catch (error) {};
+    } catch (error) {}
 
     navigate("/collections/my-collections");
   };
@@ -66,9 +69,18 @@ const CreateCards = ({ prevStep }) => {
     setCards(newCards);
   };
 
+  const allFiedsFilled = () => {
+    const allOptionsFilled = cards[currentCardIndex].options.every(
+      (option) => option !== ""
+    );
+    const answerFilled = cards[currentCardIndex].answer !== "";
+    const qustionFilled = cards[currentCardIndex].qustion !== "";
+    return allOptionsFilled && answerFilled && qustionFilled;
+  };
+
   return (
     <div className="CreateCards form-element-wrapper">
-      <p>Ваши вопрос и ответы не должны превышать 100 символов.</p>
+      <p>{t("create_cards_text")}</p>
       <div>
         <CreateCard
           currentCard={cards[currentCardIndex]}
@@ -76,19 +88,25 @@ const CreateCards = ({ prevStep }) => {
         />
         <div className="CreateCards__cards-btns">
           <button onClick={goToPrevCard} disabled={currentCardIndex === 0}>
-            Предыдущая карточка
+            {t("create_cards_prev_card")}
           </button>
-          <button onClick={goToNextCard}>
+          <button onClick={goToNextCard} disabled={!allFiedsFilled()}>
             {currentCardIndex < cards.length - 1
-              ? "Следующая карточка"
-              : "Создать карточку"}
+              ? t("create_cards_next_card")
+              : t("create_cards_new_card")}
           </button>
         </div>
       </div>
 
-      <div className="CardWorkspace__form__btns">
-        <button onClick={handleStepBackBtn}>Назад</button>
-        <button onClick={handleCreateNewSet}>создать мой сет</button>
+      <div className="CardWorkspace__form__btns CardWorkspace__create_new_set-btns">
+        <button
+          disabled={!allFiedsFilled()}
+          className="btn-create-new-set"
+          onClick={handleCreateNewSet}
+        >
+          {t("create_btn_new_set")}
+        </button>
+        <button onClick={handleStepBackBtn}>{t("create_btn_back")}</button>
       </div>
     </div>
   );

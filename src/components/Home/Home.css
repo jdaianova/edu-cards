@@ -126,14 +126,13 @@
 
 .HomeCard__btn {
     border: none;
-    background-color: rgb(7, 51, 117);
+
     border-radius: 50%;
     width: 40px;
     height: 40px;
     font-size: 12px;
     font-weight: 700;
     text-align: center;
-    color: rgb(255, 255, 255);
     cursor: pointer;
     position: relative;
 }

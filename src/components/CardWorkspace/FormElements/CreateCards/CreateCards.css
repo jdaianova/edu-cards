@@ -13,3 +13,16 @@
     padding: 5px;
     margin-top: 10px;
 }
+
+.CardWorkspace__create_new_set-btns {
+    flex-direction: column;
+}
+
+.CardWorkspace__create_new_set-btns button {
+    width: 100%;
+}
+
+.CardWorkspace__create_new_set-btns .btn-create-new-set {
+    padding: 20px;
+    font-size: 16px;
+}

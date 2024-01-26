@@ -1,7 +1,11 @@
-import { useEffect, useState } from "react";
 import "./ChoosingLang.css";
 
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 const ChoosingLang = ({ nextStep, prevStep }) => {
+  const { t } = useTranslation();
+
   const [lang, setLang] = useState(localStorage.getItem("set_lang") || null);
 
   const handleStepBackBtn = () => {
@@ -19,11 +23,11 @@ const ChoosingLang = ({ nextStep, prevStep }) => {
   return (
     <div className="ChoosingLang form-element-wrapper">
       <div className="ChoosingLang__section form-element-section">
-        <h5>выберите язык</h5>
-        <p>На каком языке будет ваш набор карточек?</p>
+        <h5>{t("choose_lang_head_text")}</h5>
+        <p>{t("choose_lang_text")}</p>
         <div className="ChoosingLang__section__lang">
           <button onClick={() => setLang("ru")} disabled={lang === "ru"}>
-            russian
+            русский
           </button>
           <button onClick={() => setLang("en")} disabled={lang === "en"}>
             english
@@ -31,9 +35,9 @@ const ChoosingLang = ({ nextStep, prevStep }) => {
         </div>
       </div>
       <div className="CardWorkspace__form__btns">
-        <button onClick={handleStepBackBtn}>Назад</button>
+        <button onClick={handleStepBackBtn}>{t("create_btn_back")}</button>
         <button onClick={handleStepForwardBtn} disabled={lang === null}>
-          Далее
+          {t("create_btn_forward")}
         </button>
       </div>
     </div>

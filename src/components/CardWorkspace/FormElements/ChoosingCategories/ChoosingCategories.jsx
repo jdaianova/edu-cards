@@ -1,12 +1,16 @@
 import "./ChoosingCategories.css";
 
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { mySetsUseCards, readySetsUseCards } from "../../../../db/db";
 import Popup from "../../../commonComponents/Popup/Popup";
 import CategoryList from "./CategoryList/CategoryList";
 
 const ChoosingCategories = ({ nextStep, prevStep }) => {
+  const { t } = useTranslation();
+
   const [allCategories, setAllCategories] = useState([]);
+  const [error, setError] = useState(false);
   const [currentCategory, setCurrentCategory] = useState(
     localStorage.getItem("currentCategory") || ""
   );
@@ -40,19 +44,21 @@ const ChoosingCategories = ({ nextStep, prevStep }) => {
   return (
     <div className="ChoosingCategories form-element-wrapper">
       <div className="ChoosingCategories__section form-element-section">
-        <h5>выберите категорию</h5>
-        <span>{`(необязательно заполнять)`}</span>
-        <p>Чтобы воспользоваться поиском, введите первые сиимволы или напишите новую категорию:</p>
+        <h5>{t("choose_category_head_text")}</h5>
+        <span>{t("create_duty")}</span>
+        <p>{t("choose_category_text")}</p>
         <CategoryList
           categories={allCategories}
           setCurrentCategory={setCurrentCategory}
           currentCategory={currentCategory}
+          error={error}
+          setError={setError}
         />
       </div>
 
       <div className="CardWorkspace__form__btns">
-        <button onClick={() => prevStep()}>Назад</button>
-        <button onClick={() => nextStep()}>Далее</button>
+        <button onClick={() => prevStep()}>{t("create_btn_back")}</button>
+        <button onClick={() => nextStep()} disabled={error}>{t("create_btn_forward")}</button>
       </div>
     </div>
   );

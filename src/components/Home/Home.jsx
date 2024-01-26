@@ -6,6 +6,7 @@ import cardsHomePic from "../../data/img/cards-home-pic2.png";
 import DotsArrow from "../../svgComponents/DotsArrow";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
+import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ const Home = () => {
                   className="HomeCard__btn"
                   onClick={() => navigate(paths[index])}
                 >
-                  <DotsArrow width={20} color={"rgb(255, 255, 255)"} />
+                  <TbSquareRoundedArrowRightFilled size={40} color="rgb(1,30,79)"/>
                 </button>
                 <p className="HomeCard__btn-title">
                   {t(`home_card_${index + 1}_button_title`)}

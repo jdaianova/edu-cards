@@ -55,7 +55,7 @@ const SetTitle = ({ nextStep }) => {
       <div className="CardWorkspace__form__btns">
         <button disabled={true}>{t("create_btn_back")}</button>
         <button onClick={saveSetTitle} disabled={error}>
-        {t("create_btn_forward")}
+          {t("create_btn_forward")}
         </button>
       </div>
     </div>

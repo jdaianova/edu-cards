@@ -1,7 +1,11 @@
 import "./SetInstructions.css";
+
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const SetInstructions = ({ nextStep, prevStep }) => {
+  const { t } = useTranslation();
+
   const [instructions, setInstructions] = useState(
     localStorage.getItem("instructions") || ""
   );
@@ -34,11 +38,11 @@ const SetInstructions = ({ nextStep, prevStep }) => {
   return (
     <div className="SetInstructions form-element-wrapper">
       <div className="SetInstructions__section form-element-section">
-        <h5>введите инструкции</h5>
-        <span>{`(необязательно заполнять)`}</span>
-        <p>Ваши инструкции не должны превышать 200 символов.</p>
+        <h5>{t("set_instructions_head_text")}</h5>
+        <span>{t("create_duty")}</span>
+        <p>{t("set_instructions_text")}</p>
         <textarea
-          placeholder="введите текст..."
+          placeholder={`${t("set_instructions_placeholder")}...`}
           value={instructions}
           onChange={handleInputChange}
           style={{ borderColor: error ? "red" : "", color: error ? "red" : "" }}
@@ -47,9 +51,9 @@ const SetInstructions = ({ nextStep, prevStep }) => {
       </div>
 
       <div className="CardWorkspace__form__btns">
-        <button onClick={prevStep}>Назад</button>
+        <button onClick={prevStep}>{t("create_btn_back")}</button>
         <button onClick={saveInstructions} disabled={error}>
-          Далее
+        {t("create_btn_forward")}
         </button>
       </div>
     </div>

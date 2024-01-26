@@ -1,0 +1,57 @@
+.CategoryFilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 7px 5px 0 5px;
+}
+
+.CategoryFilter_title {
+    text-transform: uppercase;
+    color: rgb(17, 15, 11);
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.CategoryFilter_finder {
+    width: 170px;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    color: rgb(17, 15, 11);
+    font-size: 15px;
+}
+
+.CategoryFilter_finder:focus {
+    outline: none;
+}
+
+.CategoryFilter_list {
+    background-color: rgb(217, 238, 251);
+    z-index: 1111;
+    display: flex;
+    flex-direction: column;
+    color: rgb(17, 15, 11);
+    font-size: 15px;
+    margin-top: 3px;
+    border-radius: 5px;
+    width: 170px;
+}
+
+.CategoryFilter_list-element {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.CategoryFilter_list-element:last-child {
+    border: none;
+}
+
+.CategoryFilter_list-element:hover,
+.CategoryFilter_list-element:active {
+    background-color:white;
+}

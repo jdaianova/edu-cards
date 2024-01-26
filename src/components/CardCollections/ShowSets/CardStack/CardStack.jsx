@@ -1,9 +1,11 @@
-import { useState } from "react";
 import "./CardStack.css";
+
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { mySetsUseCards } from "../../../../db/db";
 import { MdDeleteForever } from "react-icons/md";
 import { RiFileEditFill } from "react-icons/ri";
+import insertSoftHyphens from "../../../../utils/insertHyphens";
 
 const CardStack = ({ set, isReadySets, onSetDelete }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -43,7 +45,7 @@ const CardStack = ({ set, isReadySets, onSetDelete }) => {
         </div>
 
         <div className="CardStack__card">
-          <div className="CardStack__card-title">{set.set_title}</div>
+          <div className="CardStack__card-title">{insertSoftHyphens(set.set_title, 15)}</div>
           {!isReadySets && (
             <div
               className={`CardStack__card-btn ${isExpanded ? "expanded" : ""}`}

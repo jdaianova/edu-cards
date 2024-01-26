@@ -24,9 +24,6 @@ const CardCollections = () => {
             </div>
           </NavLink>
         </div>
-        <div className="CardCollections__sidebar__title">
-          {t("card_collections")}
-        </div>
       </aside>
       <main className="CardCollections__main">
         <Outlet />

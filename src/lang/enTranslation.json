@@ -48,8 +48,33 @@
     "create_new_set": "create new set",
     "create_btn_back": "back",
     "create_btn_forward": "next",
+    "create_duty": "(optional)",
     "error_more_simbols": "Exceeded maximum length.",
     "error_empty": "The 'Name' field cannot be empty.",
+    "create_btn_new_set": "Finish and save set",
+
     "set_title_head_text": "enter a title",
-    "set_title_text": "Your title must not be empty and must not exceed 50 characters in length."
+    "set_title_text": "Your title must not be empty and must not exceed 50 characters in length.",
+
+    "choose_category_head_text": "Select a category",
+    "choose_category_text": "To use search, enter the first few characters or write a new category (max. 30 characters):",
+    "choose_category_placeholder": "Enter or select a category...",
+
+    "choose_lang_head_text": "Select a language",
+    "choose_lang_text": "In what language will your set of cards be?",
+
+    "set_instructions_head_text": "Enter instructions",
+    "set_instructions_text": "Your instructions must not exceed 200 characters.",
+    "set_instructions_placeholder": "Enter instructions for the set of cards",
+    
+    "create_cards_text": "Your question and answers must not exceed 100 characters.",
+    "create_cards_question": "question",
+    "create_cards_question_placeholder": "enter question",
+    "create_cards_answer": "correct answer",
+    "create_cards_answer_placeholder": "enter answer",
+    "create_cards_answer_choices": "answer choices for the test:",
+    "create_cards_answer_choices_placeholder": "enter choice",
+    "create_cards_prev_card": "previous card",
+    "create_cards_next_card": "next card",
+    "create_cards_new_card": "create card"
 }

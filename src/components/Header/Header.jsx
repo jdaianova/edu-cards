@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import NavBar from "../NavBar/NavBar";
 import Logo from "../Logo/Logo";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -31,7 +32,9 @@ const Header = () => {
   return (
     <div className="Header">
       <div className="Header__logo">
-        <Logo />
+        <NavLink to={"/"}>
+          <Logo />
+        </NavLink>
         {isMobile && (
           <div className="Header__lang">
             <button
@@ -55,7 +58,6 @@ const Header = () => {
               {language === "en" ? "ru" : "en"}
             </button>
           </div>
-          )
         </div>
       )}
     </div>

@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import "./CategoryList.css";
 import { RxCross2 } from "react-icons/rx";
+import { useTranslation } from "react-i18next";
 
-const CategoryList = ({ categories, setCurrentCategory, currentCategory }) => {
+const CategoryList = ({
+  categories,
+  setCurrentCategory,
+  currentCategory,
+  error,
+  setError,
+}) => {
+  const { t } = useTranslation();
+
   const [searchTerm, setSearchTerm] = useState(
     localStorage.getItem("searchTerm") || ""
   );
@@ -15,8 +24,14 @@ const CategoryList = ({ categories, setCurrentCategory, currentCategory }) => {
   }, [searchTerm, currentCategory]);
 
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-    setCurrentCategory(e.target.value);
+    const newValue = e.target.value;
+    if (newValue.length > 30) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+    setSearchTerm(newValue);
+    setCurrentCategory(newValue);
   };
 
   const handleCategoryClick = (category) => {
@@ -31,6 +46,7 @@ const CategoryList = ({ categories, setCurrentCategory, currentCategory }) => {
   const handleClearSearch = () => {
     setSearchTerm("");
     setCurrentCategory("");
+    setError(false);
   };
 
   return (
@@ -38,13 +54,14 @@ const CategoryList = ({ categories, setCurrentCategory, currentCategory }) => {
       <div className="CategoryList__search">
         <input
           type="text"
-          placeholder="Введите или выберите категорию..."
+          placeholder={`${t("choose_category_placeholder")}...`}
           value={searchTerm}
           onChange={handleSearchChange}
+          style={{ borderColor: error ? "red" : "", color: error ? "red" : "" }}
         />
 
         <button onClick={handleClearSearch} className="CategoryList__clear-btn">
-        <RxCross2 size={25}/>
+          <RxCross2 size={25} />
         </button>
       </div>
 

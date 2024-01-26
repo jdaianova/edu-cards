@@ -1,0 +1,6 @@
+.LangFilter {
+    padding: 5px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}

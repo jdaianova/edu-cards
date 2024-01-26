@@ -9,19 +9,20 @@
 .CardCollections__sidebar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .CardCollections__sidebar__links {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 3px;
 }
 
 .CardCollections__sidebar-link {
     width: 140px;
     height: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -31,7 +32,7 @@
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     color: rgba(17, 15, 11, 1);
-    box-shadow: inset 0 -2px 0 0 rgba(17, 15, 11, 1);
+    /* box-shadow: inset 0 -2px 0 0 rgba(17, 15, 11, 1); */
 }
 
 .CardCollections__sidebar-link:hover {
@@ -41,17 +42,10 @@
 .active-link .CardCollections__sidebar-link {
     box-shadow: none;
     color: rgba(255, 255, 255, 1);
-}
-
-.CardCollections__sidebar__title {
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .CardCollections__main {
-
     min-width: 800px;
     flex-grow: 1;
     border-radius: 0px 5px 5px 5px;

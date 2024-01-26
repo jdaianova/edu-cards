@@ -1,6 +1,9 @@
 import "./CreateCard.css";
+import { useTranslation } from "react-i18next";
 
 const CreateCard = ({ currentCard, updateCurrentCard }) => {
+  const { t } = useTranslation();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === "answer") {
@@ -24,8 +27,9 @@ const CreateCard = ({ currentCard, updateCurrentCard }) => {
   return (
     <div className="CreateCard">
       <div className="CreateCard__section">
-        <label htmlFor="question">Question</label>
+        <label htmlFor="question">{t("create_cards_question")}</label>
         <input
+          placeholder={`${t("create_cards_question_placeholder")}...`}
           name="question"
           value={currentCard?.question}
           onChange={handleChange}
@@ -33,20 +37,22 @@ const CreateCard = ({ currentCard, updateCurrentCard }) => {
       </div>
 
       <div className="CreateCard__section">
-        <label htmlFor="answer">Right Answer</label>
+        <label htmlFor="answer">{t("create_cards_answer")}</label>
         <input
+          placeholder={`${t("create_cards_answer_placholder")}...`}
           name="answer"
           value={currentCard?.answer}
           onChange={handleChange}
         />
       </div>
 
-      <p> Answer Choices</p>
+      <p>{t("create_cards_answer_choices")}</p>
       <div className="CreateCard__section-options">
         {currentCard?.options.map((option, index) => (
           <div className="CreateCard__section-option" key={index}>
-            {/* <label htmlFor={`option-${index}`}>Option {index + 1}</label> */}
             <input
+              disabled={index === 3}
+              placeholder={`${t("create_cards_answer_choices_placholder")}...`}
               name={`option-${index}`}
               value={option}
               onChange={handleChange}
