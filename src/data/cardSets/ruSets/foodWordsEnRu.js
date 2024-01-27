@@ -3,7 +3,7 @@ const foodWordsEnRu = {
   set_title: "Английские слова: Еда",
   date_of_create: "2023-01-07",
   lang: "ru",
-  instructions: "напиши перевод на русский язык",
+  instructions: "Выберите перевод на русский язык.",
   category: "английский язык",
   set_cards: [
     {

@@ -1,8 +1,10 @@
 import "./Learning.css";
+
 import { useLocation, useNavigate } from "react-router-dom";
 import SwipeCard from "./SwipeCard/SwipeCard";
 import { useState } from "react";
 import LearningInstractions from "./LearningInstractions/LearningInstractions";
+import insertSoftHyphens from '../../../utils/insertHyphens';
 
 const Learning = () => {
   const location = useLocation();
@@ -39,11 +41,14 @@ const Learning = () => {
             />
           ) : (
             <div className="Learning__score">
+              <div className="Learning__score-title">{insertSoftHyphens(set.set_title, 20)}</div>
               <div className="Learning__score-learned">
-                выучено: {learnedCards}
+                <p>выучено:</p>
+                <p>{learnedCards}</p>
               </div>
-              <div className="Learning__score-unlearned">
-                повторить: {unlearnedCards}
+              <div className="Learning__score-learned">
+                <p>повторить:</p>
+                <p>{unlearnedCards}</p>
               </div>
               <button onClick={handleOnceMore}>еще раз</button>
               <button onClick={() => navigate("/collections/my-collections")}>
@@ -52,8 +57,7 @@ const Learning = () => {
             </div>
           )}
         </div>
-        <div className="Learning__"></div>
-        <LearningInstractions />
+        {cards.length > 0 && <LearningInstractions />}
       </div>
     </div>
   );

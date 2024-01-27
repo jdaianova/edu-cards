@@ -106,7 +106,12 @@ const CreateCards = ({ prevStep }) => {
         >
           {t("create_btn_new_set")}
         </button>
-        <button onClick={handleStepBackBtn}>{t("create_btn_back")}</button>
+        <button
+          disabled={!allFiedsFilled()}
+          onClick={handleStepBackBtn}
+        >
+          {t("create_btn_back")}
+        </button>
       </div>
     </div>
   );

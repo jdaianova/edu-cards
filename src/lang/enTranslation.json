@@ -67,7 +67,7 @@
     "set_instructions_text": "Your instructions must not exceed 200 characters.",
     "set_instructions_placeholder": "Enter instructions for the set of cards",
     
-    "create_cards_text": "Your question and answers must not exceed 100 characters.",
+    "create_cards_text": "Your question should not exceed 100 characters, and answers should be 30 characters or less.",
     "create_cards_question": "question",
     "create_cards_question_placeholder": "enter question",
     "create_cards_answer": "correct answer",

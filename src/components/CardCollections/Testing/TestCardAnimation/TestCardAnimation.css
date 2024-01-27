@@ -49,6 +49,22 @@
     background-color: darkblue;
 }
 
+.TestCardAnimation__card-test-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.TestCardAnimation__card-test-end button {
+    width: 200px;
+    height: 40px;
+}
+
 @keyframes flipAndMove {
     0% {
         transform: rotateY(0) translateX(0);

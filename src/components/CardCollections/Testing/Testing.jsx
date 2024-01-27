@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import TestCardAnimation from "./TestCardAnimation/TestCardAnimation";
 
 import  getQuestionWord  from "../../../utils/getQuestionWord";
+import insertSoftHyphens from "../../../utils/insertHyphens";
 
 const Testing = () => {
   const location = useLocation();
@@ -19,7 +20,7 @@ const Testing = () => {
   return (
     <div className="Testing-container">
       <div className="Testing__title">
-        <h4>{set.set_title}</h4>
+        <h4>{insertSoftHyphens(set.set_title, 15)}</h4>
         <div className="Testing__title-number-of-questions">
           {set.set_cards.length || 0}
           {getQuestionWord(set.set_cards.length || 0)}
@@ -33,7 +34,6 @@ const Testing = () => {
       </div>
       {!startTesting && (
         <div className="Testing-start">
-          <div>rules</div>
           <button onClick={() => setStartTesting(true)}>start</button>
         </div>
       )}

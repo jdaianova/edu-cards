@@ -39,7 +39,7 @@ const TestCardAnimation = ({
     <div className="TestCardAnimation">
       {endTest ? (
         // часть с сообщением о завершении теста
-        <div className="TestCardAnimation__card-content">
+        <div className="TestCardAnimation__card-test-end">
           <p>тест завершен</p>
           <button onClick={handleEndTest}>пройти другой тест</button>
         </div>

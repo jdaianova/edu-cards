@@ -3,11 +3,11 @@ const getQuestionWord = (num) => {
   const lastTwoDigits = num % 100;
 
   if (lastDigit === 1 && lastTwoDigits !== 11) {
-    return 'вопрос';
+    return ' вопрос';
   } else if ([2, 3, 4].includes(lastDigit) && ![12, 13, 14].includes(lastTwoDigits)) {
-    return 'вопроса';
+    return ' вопроса';
   } else {
-    return 'вопросов';
+    return ' вопросов';
   }
 }
 

@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
 import "./CategoryFilter.css";
+
+import { useEffect, useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 const CategoryFilter = ({ setFilterCategory, filteredSets }) => {
   const [isDropList, setIsDropList] = useState(false);
@@ -7,7 +9,7 @@ const CategoryFilter = ({ setFilterCategory, filteredSets }) => {
 
   useEffect(() => {
     setFilterCategory(findedCategory);
-  }, [findedCategory,setFilterCategory]);
+  }, [findedCategory, setFilterCategory]);
 
   const currentCategories = [
     "all",
@@ -38,20 +40,27 @@ const CategoryFilter = ({ setFilterCategory, filteredSets }) => {
     }, 100);
   };
 
+  const handleClearSearch = () => {
+    setFindedCategory("");
+  };
+
   return (
     <div className="CategoryFilter">
       <div className="CategoryFilter_title">show sets with category</div>
-
-      <input
-        placeholder="all"
-        className="CategoryFilter_finder"
-        value={findedCategory}
-        type="text"
-        onChange={handleChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-      />
-
+      <div className="CategoryFilter_finder-container">
+        <input
+          placeholder="all"
+          className="CategoryFilter_finder"
+          value={findedCategory}
+          type="text"
+          onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+        <button onClick={handleClearSearch} className="CategoryList__clear-btn">
+          <RxCross2 size={25} />
+        </button>
+      </div>
       {isDropList && (
         <div className="CategoryFilter_list">
           {filteredCategories.map((category, i) => (

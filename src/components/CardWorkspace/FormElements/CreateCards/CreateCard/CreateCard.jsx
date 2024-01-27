@@ -33,6 +33,12 @@ const CreateCard = ({ currentCard, updateCurrentCard }) => {
           name="question"
           value={currentCard?.question}
           onChange={handleChange}
+          style={{
+            color:
+              currentCard?.question && currentCard.question.length > 100
+                ? "red"
+                : "",
+          }}
         />
       </div>
 
@@ -43,6 +49,12 @@ const CreateCard = ({ currentCard, updateCurrentCard }) => {
           name="answer"
           value={currentCard?.answer}
           onChange={handleChange}
+          style={{
+            color:
+              currentCard?.answer && currentCard.answer.length > 30
+                ? "red"
+                : "",
+          }}
         />
       </div>
 
@@ -56,6 +68,9 @@ const CreateCard = ({ currentCard, updateCurrentCard }) => {
               name={`option-${index}`}
               value={option}
               onChange={handleChange}
+              style={{
+                color: option && option.length > 30 ? "red" : "",
+              }}
             />
           </div>
         ))}

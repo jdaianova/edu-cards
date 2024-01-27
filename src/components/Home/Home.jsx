@@ -3,7 +3,6 @@ import HomeCard from "../HomeCard/HomeCard";
 import { useContext } from "react";
 import { ThemeContext } from "../ThemeContext";
 import cardsHomePic from "../../data/img/cards-home-pic2.png";
-import DotsArrow from "../../svgComponents/DotsArrow";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
@@ -42,7 +41,10 @@ const Home = () => {
                   className="HomeCard__btn"
                   onClick={() => navigate(paths[index])}
                 >
-                  <TbSquareRoundedArrowRightFilled size={40} color="rgb(1,30,79)"/>
+                  <TbSquareRoundedArrowRightFilled
+                    size={40}
+                    color="rgb(1,30,79)"
+                  />
                 </button>
                 <p className="HomeCard__btn-title">
                   {t(`home_card_${index + 1}_button_title`)}

@@ -58,7 +58,7 @@
 
     "choose_category_head_text": "выберите категорию",
     "choose_category_text": "Чтобы воспользоваться поиском, введите первые сиимволы или напишите новую категорию (не более 30 символов):",
-    "choose_category_placeholder": "введите или выберите категорию...",
+    "choose_category_placeholder": "введите или выберите категорию",
 
     "choose_lang_head_text": "выберите язык",
     "choose_lang_text": "На каком языке будет ваш набор карточек?",
@@ -67,7 +67,7 @@
     "set_instructions_text": "Ваши инструкции не должны превышать 200 символов.",
     "set_instructions_placeholder": "введите инструкции к набору карточек",
 
-    "create_cards_text": "Ваши вопрос и ответы не должны превышать 100 символов.",
+    "create_cards_text": "Ваши вопрос не должен превышать 100 символов, а ответы 30 символов.",
     "create_cards_question": "вопрос",
     "create_cards_question_placeholder": "введите вопрос",
     "create_cards_answer": "правильный ответ",

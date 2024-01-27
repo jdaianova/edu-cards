@@ -58,6 +58,8 @@
 
 @media screen and (max-height: 850px) {
   .Contacts {
-    background-color: red;
+min-height: 1000px;
+background: linear-gradient(345deg, rgb(17, 15, 11) 70%, rgb(1, 30, 79) 85%, rgb(7, 51, 117) 90%, rgb(7, 51, 117) 100%);
+
   }
 }

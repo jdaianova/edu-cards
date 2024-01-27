@@ -4,7 +4,7 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .Footer__themes {
@@ -65,5 +65,9 @@
 
     .Footer__themes-btns {
         margin-top: 10px;
+    }
+
+    .Footer {
+        background-color: rgba(0, 0, 0, 0);
     }
 }

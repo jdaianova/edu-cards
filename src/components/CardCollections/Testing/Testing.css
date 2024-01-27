@@ -45,3 +45,22 @@
     margin-left: 10px;
     background-color: rgb(192, 97, 97);
 }
+
+.Testing-start {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Testing-start button {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.Testing-instructions {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
