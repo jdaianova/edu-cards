@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/edu-cards/static/css/main.d17b0fea.css",
-    "main.js": "/edu-cards/static/js/main.cbcd1cef.js",
+    "main.css": "/edu-cards/static/css/main.afbe41fd.css",
+    "main.js": "/edu-cards/static/js/main.a43e69ee.js",
     "static/media/sea-theme.png": "/edu-cards/static/media/sea-theme.a857c44e9fb2b3c96b79.png",
     "static/media/cards-home-pic2.png": "/edu-cards/static/media/cards-home-pic2.342980b86a700ee78f4b.png",
     "static/media/sea-theme-mobile.png": "/edu-cards/static/media/sea-theme-mobile.7faf7ca2514123bcd299.png",
@@ -104,11 +104,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/edu-cards/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/edu-cards/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/edu-cards/index.html",
-    "main.d17b0fea.css.map": "/edu-cards/static/css/main.d17b0fea.css.map",
-    "main.cbcd1cef.js.map": "/edu-cards/static/js/main.cbcd1cef.js.map"
+    "main.afbe41fd.css.map": "/edu-cards/static/css/main.afbe41fd.css.map",
+    "main.a43e69ee.js.map": "/edu-cards/static/js/main.a43e69ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.d17b0fea.css",
-    "static/js/main.cbcd1cef.js"
+    "static/css/main.afbe41fd.css",
+    "static/js/main.a43e69ee.js"
   ]
 }
