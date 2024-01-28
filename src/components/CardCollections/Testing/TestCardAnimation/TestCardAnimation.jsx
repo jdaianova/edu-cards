@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./TestCardAnimation.css";
 import TestingCard from "../TestingCard/TestingCard";
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
 
 const TestCardAnimation = ({
   currentcCardInfo,
@@ -10,6 +11,7 @@ const TestCardAnimation = ({
   setCorrectAnswers,
   setInorrectAnswers,
 }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [changeCards, setChangeCards] = useState(false);
   const [leftDeck, setLeftDeck] = useState(numberOfCards);
@@ -40,8 +42,8 @@ const TestCardAnimation = ({
       {endTest ? (
         // часть с сообщением о завершении теста
         <div className="TestCardAnimation__card-test-end">
-          <p>тест завершен</p>
-          <button onClick={handleEndTest}>пройти другой тест</button>
+          <p>{t("testing_test_end")}</p>
+          <button onClick={handleEndTest}>{t("testing_another_test")}</button>
         </div>
       ) : (
         // часть с карточками

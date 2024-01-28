@@ -4,6 +4,7 @@ import { VscTriangleLeft } from "react-icons/vsc";
 import { VscTriangleRight } from "react-icons/vsc";
 import { useSwipeable } from "react-swipeable";
 import SwipeCardAnswer from "../SwipeCardAnswer/SwipeCardAnswer";
+import insertSoftHyphens from "../../../../utils/insertHyphens";
 
 function SwipeCard({ card, onSwipe, setLearnedCards, setUnlearnedCards }) {
   const [swipeClass, setSwipeClass] = useState("");
@@ -35,8 +36,10 @@ function SwipeCard({ card, onSwipe, setLearnedCards, setUnlearnedCards }) {
         </button>
 
         <div {...handlers} className={`SwipeCard ${swipeClass}`}>
-          <div className="SwipeCard__content-question">{card.question}</div>
-          <SwipeCardAnswer answer={card.answer} />
+          <div className="SwipeCard__content-question">
+            {insertSoftHyphens(card.question,25)}
+          </div>
+          <SwipeCardAnswer answer={insertSoftHyphens(card.answer,25)} />
         </div>
 
         <button className="SwipeArrowRight" onClick={swipeRight}>

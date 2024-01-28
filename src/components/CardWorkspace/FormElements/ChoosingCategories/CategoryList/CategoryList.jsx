@@ -25,7 +25,7 @@ const CategoryList = ({
 
   const handleSearchChange = (e) => {
     const newValue = e.target.value;
-    if (newValue.length > 30) {
+    if (newValue.length > 20) {
       setError(true);
     } else {
       setError(false);
@@ -57,7 +57,7 @@ const CategoryList = ({
           placeholder={`${t("choose_category_placeholder")}...`}
           value={searchTerm}
           onChange={handleSearchChange}
-          style={{ borderColor: error ? "red" : "", color: error ? "red" : "" }}
+          style={{ color: error ? "red" : "" }}
         />
 
         <button onClick={handleClearSearch} className="CategoryList__clear-btn">

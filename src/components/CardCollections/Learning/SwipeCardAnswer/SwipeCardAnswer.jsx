@@ -7,7 +7,7 @@ function SwipeCardAnswer({ answer }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
-    setIsFlipped(!isFlipped); // Toggle the flipped state
+    setIsFlipped(!isFlipped);
   };
 
   return (

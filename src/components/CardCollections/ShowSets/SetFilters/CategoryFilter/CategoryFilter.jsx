@@ -2,8 +2,10 @@ import "./CategoryFilter.css";
 
 import { useEffect, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
+import { useTranslation } from "react-i18next";
 
 const CategoryFilter = ({ setFilterCategory, filteredSets }) => {
+  const { t } = useTranslation();
   const [isDropList, setIsDropList] = useState(false);
   const [findedCategory, setFindedCategory] = useState("");
 
@@ -46,10 +48,10 @@ const CategoryFilter = ({ setFilterCategory, filteredSets }) => {
 
   return (
     <div className="CategoryFilter">
-      <div className="CategoryFilter_title">show sets with category</div>
+      <div className="CategoryFilter_title">{t("show_sets_with_category")}</div>
       <div className="CategoryFilter_finder-container">
         <input
-          placeholder="all"
+          placeholder={`${t("filter_placeholder_all")}...`}
           className="CategoryFilter_finder"
           value={findedCategory}
           type="text"

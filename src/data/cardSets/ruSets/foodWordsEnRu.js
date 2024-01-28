@@ -1,7 +1,7 @@
 const foodWordsEnRu = {
   set_id: "djfhskd3849837563jhfdbovajkvd",
   set_title: "Английские слова: Еда",
-  date_of_create: "2023-01-07",
+  date_of_create: "2024-01-27",
   lang: "ru",
   instructions: "Выберите перевод на русский язык.",
   category: "английский язык",

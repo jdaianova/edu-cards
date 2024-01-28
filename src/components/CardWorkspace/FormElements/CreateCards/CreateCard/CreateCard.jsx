@@ -45,7 +45,7 @@ const CreateCard = ({ currentCard, updateCurrentCard }) => {
       <div className="CreateCard__section">
         <label htmlFor="answer">{t("create_cards_answer")}</label>
         <input
-          placeholder={`${t("create_cards_answer_placholder")}...`}
+          placeholder={`${t("create_cards_answer_placeholder")}...`}
           name="answer"
           value={currentCard?.answer}
           onChange={handleChange}
@@ -64,7 +64,7 @@ const CreateCard = ({ currentCard, updateCurrentCard }) => {
           <div className="CreateCard__section-option" key={index}>
             <input
               disabled={index === 3}
-              placeholder={`${t("create_cards_answer_choices_placholder")}...`}
+              placeholder={`${t("create_cards_answer_choices_placeholder")}...`}
               name={`option-${index}`}
               value={option}
               onChange={handleChange}

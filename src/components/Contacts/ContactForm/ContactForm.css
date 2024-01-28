@@ -47,3 +47,31 @@
     margin-top: 20px;
     padding: 10px;
 }
+
+@media screen and (max-width: 800px) {
+    .ContactForm {
+        width: 300px;
+        height: 300px;
+    }
+
+    .ContactForm #email {
+        width: 250px;
+    }
+
+    .ContactForm #message {
+        width: 250px;
+        height: 100px;
+    }
+
+    .ContactForm button {
+        width: 250px;
+    }
+
+    .ContactForm label {
+        font-size: 12px;
+    }
+}
+
+.ContactForm-sea, .ContactForm-light {
+    background-color: rgba(1, 30, 79, 0.1);
+}

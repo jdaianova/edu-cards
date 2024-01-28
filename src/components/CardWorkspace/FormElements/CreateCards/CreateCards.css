@@ -26,3 +26,14 @@
     padding: 20px;
     font-size: 16px;
 }
+
+@media screen and (max-height: 850px) {
+    .CreateCards {
+        margin-top: -35px;
+    }
+
+    .CreateCards p {
+        font-size: 12px;
+        margin-top: 18px;
+    }
+}

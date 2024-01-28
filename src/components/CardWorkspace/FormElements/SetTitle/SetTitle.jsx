@@ -47,7 +47,7 @@ const SetTitle = ({ nextStep }) => {
           placeholder={`${t("set_title_head_text")}...`}
           value={currentTitle}
           onChange={handleInputChange}
-          style={{ borderColor: error ? "red" : "", color: error ? "red" : "" }}
+          style={{ color: error ? "red" : "" }}
         />
         {error && <div className="error">{error}</div>}
       </div>

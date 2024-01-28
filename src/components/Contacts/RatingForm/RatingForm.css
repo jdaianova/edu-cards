@@ -1,6 +1,5 @@
 .RatingForm {
     width: 450px;
-    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +52,6 @@
 
 .RatingForm #comment {
     width: 350px;
-    height: 350px;
     border-radius: 3px;
     border: none;
     margin-top: 10px;
@@ -68,4 +66,31 @@
     padding: 10px;
     width: 350px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .RatingForm {
+        width: 300px;
+    }
+
+    .RatingForm #name {
+        width: 250px;
+    }
+
+    .RatingForm label {
+        font-size: 12px;
+    }
+
+    .RatingForm #comment {
+        width: 250px;
+    }
+
+    .submit-btn {
+        width: 250px;
+    }
+}
+
+.RatingForm-sea,
+.RatingForm-light {
+    background-color: rgba(1, 30, 79, 0.1);
 }

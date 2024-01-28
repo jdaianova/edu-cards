@@ -82,11 +82,12 @@
     width: 120px;
     margin-top: -2px;
     border-radius: 50%;
+    border-color: red;
 }
 
 .rectangle-left-wave {
     position: absolute;
-    left: -50px;
+    left: -40px;
 }
 
 .rectangle-right-wave {
@@ -95,4 +96,12 @@
 
 .rectangle:last-child .rectangle-left-wave {
     border: none;
+}
+
+@media screen and (max-width: 480px) {
+    .Timeline {
+        width: 200px;
+        height: 450px;
+        margin-top: -25px;
+    }
 }

@@ -57,7 +57,7 @@
     "set_title_text": "Your title must not be empty and must not exceed 50 characters in length.",
 
     "choose_category_head_text": "Select a category",
-    "choose_category_text": "To use search, enter the first few characters or write a new category (max. 30 characters):",
+    "choose_category_text": "To use search, enter the first few characters or write a new category (max. 20 characters):",
     "choose_category_placeholder": "Enter or select a category...",
 
     "choose_lang_head_text": "Select a language",
@@ -76,5 +76,21 @@
     "create_cards_answer_choices_placeholder": "enter choice",
     "create_cards_prev_card": "previous card",
     "create_cards_next_card": "next card",
-    "create_cards_new_card": "create card"
+    "create_cards_new_card": "create card",
+
+    "learning_learned": "learned",
+    "learning_repeat": "repeat",
+    "learning_once_more": "once more",
+    "learning_another_test": "choose another test",
+    "learning_use_swipe": "use swipe or arrows",
+    "learning_already_know": "already know",
+    "learning_show_answer": "answer",
+
+    "testing_start": "start",
+    "testing_another_test": "take another test",
+    "testing_test_end": "test completed",
+
+    "show_sets_with_category": "show sets with category",
+    "filter_placeholder_all": "all"
+
 }

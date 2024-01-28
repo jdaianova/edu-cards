@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
 import "./TestingCard.css";
+
+import { useEffect, useState } from "react";
+import insertSoftHyphens from "../../../../utils/insertHyphens";
 
 const TestingCard = ({
   currentcCardInfo,
@@ -45,7 +47,9 @@ const TestingCard = ({
 
   return (
     <div className="TestingCard">
-      <div className="TestingCard-question">{currentcCardInfo.question}</div>
+      <div className="TestingCard-question">
+        <p>{insertSoftHyphens(currentcCardInfo.question, 25)}</p>
+      </div>
       <div className="TestingCard__options">
         {currentcCardInfo.options.map((option, i) => (
           <div key={i}>
@@ -54,7 +58,7 @@ const TestingCard = ({
               onClick={() => handleOptionClick(option)}
               disabled={selectedOption !== null}
             >
-              {option}
+              {insertSoftHyphens(option, 25)}
             </button>
           </div>
         ))}

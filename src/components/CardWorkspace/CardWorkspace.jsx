@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./CardWorkspace.css";
 import SetTitle from "./FormElements/SetTitle/SetTitle";
 import ChoosingCategories from "./FormElements/ChoosingCategories/ChoosingCategories";
@@ -6,8 +6,10 @@ import ChoosingLang from "./FormElements/ChoosingLang/ChoosingLang";
 import SetInstructions from "./FormElements/SetInstructions/SetInstructions";
 import CreateCards from "./FormElements/CreateCards/CreateCards";
 import { useTranslation } from "react-i18next";
+import { ThemeContext } from "../ThemeContext";
 
 const CardWorkspace = () => {
+  const { theme } = useContext(ThemeContext);
   const { t } = useTranslation();
   const [stepOfCreation, setStepOfCreation] = useState(
     parseInt(localStorage.getItem("currentStep")) || 1
@@ -24,7 +26,7 @@ const CardWorkspace = () => {
   };
 
   return (
-    <div className="CardWorkspace">
+    <div className={`CardWorkspace CardWorkspace-${theme}`}>
       <div className="CardWorkspace__title">
         <h3>{t("create_new_set")}</h3>
       </div>

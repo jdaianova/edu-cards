@@ -1,7 +1,7 @@
 const largestRiversRu = {
     set_id: "abc12345xyz",
     set_title: "Крупнейшие реки мира",
-    date_of_create: "2023-02-10",
+    date_of_create: "2024-01-21",
     lang: "ru",
     category: "география",
     instructions: "",

@@ -54,12 +54,17 @@
   .Contacts h2 {
     margin-top: 0px;
   }
-}
 
-@media screen and (max-height: 850px) {
-  .Contacts {
-min-height: 1000px;
-background: linear-gradient(345deg, rgb(17, 15, 11) 70%, rgb(1, 30, 79) 85%, rgb(7, 51, 117) 90%, rgb(7, 51, 117) 100%);
+  .Contacts h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
 
+  .confirmation {
+    padding: 30px;
+  }
+
+  .confirmation p,   .confirmation span {
+    font-size: 15px;
   }
 }

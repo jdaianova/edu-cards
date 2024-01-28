@@ -26,7 +26,7 @@ const yearlyEventsRu = [{
             date: "2023-01-27",
             title: "Новые тесты по английскому языку.",
             lang: "ru",
-            deploy: false,
+            deploy: true,
         },
     ]
 },

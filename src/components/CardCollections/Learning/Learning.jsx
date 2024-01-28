@@ -5,8 +5,10 @@ import SwipeCard from "./SwipeCard/SwipeCard";
 import { useState } from "react";
 import LearningInstractions from "./LearningInstractions/LearningInstractions";
 import insertSoftHyphens from '../../../utils/insertHyphens';
+import { useTranslation } from "react-i18next";
 
 const Learning = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const { set } = location.state || {};
@@ -43,16 +45,16 @@ const Learning = () => {
             <div className="Learning__score">
               <div className="Learning__score-title">{insertSoftHyphens(set.set_title, 20)}</div>
               <div className="Learning__score-learned">
-                <p>выучено:</p>
+                <p>{t("learning_learned")}:</p>
                 <p>{learnedCards}</p>
               </div>
               <div className="Learning__score-learned">
-                <p>повторить:</p>
+                <p>{t("learning_repeat")}:</p>
                 <p>{unlearnedCards}</p>
               </div>
-              <button onClick={handleOnceMore}>еще раз</button>
+              <button onClick={handleOnceMore}>{t("learning_once_more")}</button>
               <button onClick={() => navigate("/collections/my-collections")}>
-                выбрать другой сет
+              {t("learning_another_test")}
               </button>
             </div>
           )}

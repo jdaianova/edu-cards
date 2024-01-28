@@ -3,7 +3,6 @@ import "./ChoosingCategories.css";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { mySetsUseCards, readySetsUseCards } from "../../../../db/db";
-import Popup from "../../../commonComponents/Popup/Popup";
 import CategoryList from "./CategoryList/CategoryList";
 
 const ChoosingCategories = ({ nextStep, prevStep }) => {
@@ -29,9 +28,7 @@ const ChoosingCategories = ({ nextStep, prevStep }) => {
           new Set(allSets.map((set) => set.category))
         ).filter((elem) => elem !== "");
         setAllCategories(tempAllCategories);
-      } catch (error) {
-        return <Popup text={error.message} />;
-      }
+      } catch (error) {}
     }
 
     getAllCategories();

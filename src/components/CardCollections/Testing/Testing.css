@@ -1,9 +1,9 @@
-.Testing-container{
+.Testing-container {
     min-height: 500px;
+    width: 100%;
 }
 
 .Testing__title {
-    text-align: left;
     padding: 0px 30px;
     background-color: rgba(255, 255, 255, 0.5);
     margin-top: 40px;
@@ -12,9 +12,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .Testing__title h4 {
+    text-align: left;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 700;
@@ -24,6 +26,7 @@
 .Testing__title-number-of-questions {
     flex-grow: 1;
     padding-left: 15px;
+    text-align: center;
 }
 
 .Testing__title__score {
@@ -33,7 +36,8 @@
     align-items: center;
 }
 
-.Testing__title__score-correct, .Testing__title__score-incorrect {
+.Testing__title__score-correct,
+.Testing__title__score-incorrect {
     background-color: rgb(63, 167, 63);
     font-size: 40px;
     font-weight: 700;
@@ -57,10 +61,36 @@
     height: 40px;
     font-size: 20px;
     font-weight: 700;
+    margin-top: 10px;
 }
 
 .Testing-instructions {
     width: 100%;
     text-align: center;
     color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .Testing-container {
+        width: 100%;
+    }
+
+    .Testing__title {
+        width: 100vw;
+        padding: 0px 20px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Testing__title h4 {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .Testing__title-number-of-questions {
+        font-size: 12px;
+    }
 }

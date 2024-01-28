@@ -57,7 +57,7 @@
     "set_title_text": "Ваше название должно быть не пустым и длиной не более 50 символов.",
 
     "choose_category_head_text": "выберите категорию",
-    "choose_category_text": "Чтобы воспользоваться поиском, введите первые сиимволы или напишите новую категорию (не более 30 символов):",
+    "choose_category_text": "Чтобы воспользоваться поиском, введите первые сиимволы или напишите новую категорию (не более 20 символов):",
     "choose_category_placeholder": "введите или выберите категорию",
 
     "choose_lang_head_text": "выберите язык",
@@ -71,12 +71,26 @@
     "create_cards_question": "вопрос",
     "create_cards_question_placeholder": "введите вопрос",
     "create_cards_answer": "правильный ответ",
-    "create_cards_answer_placholder": "введите ответ",
+    "create_cards_answer_placeholder": "введите ответ",
     "create_cards_answer_choices": "варианты ответов для теста:",
-    "create_cards_answer_choices_placholder": "введите вариант",
+    "create_cards_answer_choices_placeholder": "введите вариант",
     "create_cards_prev_card": "предыдущая карточка",
     "create_cards_next_card": "следующая карточка",
-    "create_cards_new_card": "создать карточку"
+    "create_cards_new_card": "создать карточку",
 
+    "learning_learned": "выучено",
+    "learning_repeat": "повторить",
+    "learning_once_more": "еще раз",
+    "learning_another_test": "выбрать другой тест",
+    "learning_use_swipe": "используй свайп или стрелки",
+    "learning_already_know": "уже знаю",
+    "learning_show_answer": "ответ",
+
+    "testing_start": "начать",
+    "testing_another_test": "пройти другой тест",
+    "testing_test_end": "тест завершен",
+
+    "show_sets_with_category": "наборы по категориям:",
+    "filter_placeholder_all": "все"
 
 }

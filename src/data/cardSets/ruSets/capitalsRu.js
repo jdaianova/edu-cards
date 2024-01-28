@@ -1,7 +1,7 @@
 const capitalsRu = {
   set_id: "asdjh3287kjhfdbasckh",
   set_title: "Столицы Мира",
-  date_of_create: "2023-01-07",
+  date_of_create: "2024-01-01",
   lang: "ru",
   category: "география",
   instructions: "",

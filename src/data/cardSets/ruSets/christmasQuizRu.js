@@ -1,7 +1,7 @@
 const christmasQuizRu = {
   set_id: "jsapfw8914dfwfwf",
   set_title: "Рождественский Квиз",
-  date_of_create: "2023-01-07",
+  date_of_create: "2024-01-07",
   lang: "ru",
   category: "праздники",
   instructions: "",

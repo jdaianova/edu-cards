@@ -1,4 +1,4 @@
-const getQuestionWord = (num) => {
+const getQuestionWord = (num, lang) => {
   const lastDigit = num % 10;
   const lastTwoDigits = num % 100;
 

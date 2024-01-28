@@ -1,7 +1,7 @@
 const literatureSets = {
     set_id: "lkjhf3290kjsndfkj2",
     set_title: "Известные Литературные Произведения",
-    date_of_create: "2023-01-07",
+    date_of_create: "2023-12-10",
     lang: "ru",
     category: "литература",
     instructions: "",
