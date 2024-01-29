@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { mySetsUseCards } from "../../../../db/db";
 import { MdDeleteForever } from "react-icons/md";
-import { RiFileEditFill } from "react-icons/ri";
 import insertSoftHyphens from "../../../../utils/insertHyphens";
 
 const CardStack = ({ set, isReadySets, onSetDelete }) => {
@@ -22,11 +21,6 @@ const CardStack = ({ set, isReadySets, onSetDelete }) => {
   const handleDeleteSet = async () => {
     await mySetsUseCards.sets.delete(set.set_id);
     onSetDelete();
-  };
-
-  const handleEditSet = async () => {
-    localStorage.setItem('editedSetID', set.set_id);
-    navigate('/collections/editing');
   };
 
   return (
@@ -57,12 +51,6 @@ const CardStack = ({ set, isReadySets, onSetDelete }) => {
             <div
               className={`CardStack__card-btn ${isExpanded ? "expanded" : ""}`}
             >
-              <button
-                className="CardStack__card-btn-edit"
-                onClick={handleEditSet}
-              >
-                <RiFileEditFill size={18} color={"rgba(152, 220, 152)"} />
-              </button>
               <button
                 className="CardStack__card-btn-delete"
                 onClick={handleDeleteSet}

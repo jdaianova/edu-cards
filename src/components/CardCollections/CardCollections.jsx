@@ -1,5 +1,6 @@
-import { NavLink, Outlet } from "react-router-dom";
 import "./CardCollections.css";
+
+import { NavLink, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const CardCollections = () => {

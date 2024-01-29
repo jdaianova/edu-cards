@@ -32,7 +32,7 @@
     margin-left: 6px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     transform: rotate(-3deg);
 }
@@ -41,6 +41,7 @@
     transition: 0.5s ease;
     rotate: 3deg;
     margin-left: 4px;
+
 }
 
 .CardStack__card-btn button {
