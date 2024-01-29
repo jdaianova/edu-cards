@@ -33,18 +33,25 @@ const Testing = () => {
   return (
     <div className="Testing-container">
       <div className="Testing__title">
-        <h4>{insertSoftHyphens(set.set_title, 15)}</h4>
-        <div className="Testing__title-number-of-questions">
-          {set.set_cards.length || 0}
+        <div className="Testing__title__number-of-questions">
+          <div className="Testing__title__number-of-questions-num">
+            {set.set_cards.length || 0}
+          </div>
+          <div className="Testing__title__number-of-questions-word">
+            {currentLanguage === "ru" && (
+              <span>{getQuestionWord(set.set_cards.length || 0)}</span>
+            )}
 
-          {currentLanguage === "ru" && (
-            <span>{getQuestionWord(set.set_cards.length || 0)}</span>
-          )}
-
-          {currentLanguage === "en" && (
-            <span>{set.set_cards.length === 1 ? " question" : " questions"}</span>
-          )}
+            {currentLanguage === "en" && (
+              <span>
+                {set.set_cards.length === 1 ? " question" : " questions"}
+              </span>
+            )}
+          </div>
         </div>
+
+        <h4>{insertSoftHyphens(set.set_title, 15)}</h4>
+
         <div className="Testing__title__score">
           <div className="Testing__title__score-correct">{correctAnswers}</div>
           <div className="Testing__title__score-incorrect">
@@ -52,16 +59,20 @@ const Testing = () => {
           </div>
         </div>
       </div>
+
       {!startTesting && (
         <div className="Testing-start">
+          {set.instructions && (
+            <div className="Testing-instructions">
+              {insertSoftHyphens(set.instructions, 50)}
+            </div>
+          )}
           <button onClick={() => setStartTesting(true)}>{t("start")}</button>
         </div>
       )}
+
       {startTesting && currentQuestionIndex < set.set_cards.length && (
         <div className="Testing">
-          {set.instructions && (
-            <div className="Testing-instructions">{set.instructions}</div>
-          )}
           <div className="Testing-cards">
             <TestCardAnimation
               currentcCardInfo={set.set_cards[currentQuestionIndex]}

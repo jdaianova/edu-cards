@@ -24,6 +24,11 @@ const CardStack = ({ set, isReadySets, onSetDelete }) => {
     onSetDelete();
   };
 
+  const handleEditSet = async () => {
+    localStorage.setItem('editedSetID', set.set_id);
+    navigate('/collections/editing');
+  };
+
   return (
     <div>
       <div
@@ -45,19 +50,24 @@ const CardStack = ({ set, isReadySets, onSetDelete }) => {
         </div>
 
         <div className="CardStack__card">
-          <div className="CardStack__card-title">{insertSoftHyphens(set.set_title, 15)}</div>
+          <div className="CardStack__card-title">
+            {insertSoftHyphens(set.set_title, 15)}
+          </div>
           {!isReadySets && (
             <div
               className={`CardStack__card-btn ${isExpanded ? "expanded" : ""}`}
             >
-              <button className="CardStack__card-btn-edit">
-                <RiFileEditFill size={28} color={"rgba(152, 220, 152)"} />
+              <button
+                className="CardStack__card-btn-edit"
+                onClick={handleEditSet}
+              >
+                <RiFileEditFill size={18} color={"rgba(152, 220, 152)"} />
               </button>
               <button
                 className="CardStack__card-btn-delete"
                 onClick={handleDeleteSet}
               >
-                <MdDeleteForever size={33} color={"rgba(255, 180, 180)"} />
+                <MdDeleteForever size={20} color={"rgba(255, 180, 180)"} />
               </button>
             </div>
           )}

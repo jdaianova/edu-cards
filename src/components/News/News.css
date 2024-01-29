@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 3%;
+    min-height: 500px;
 }
 
 .News h5 {

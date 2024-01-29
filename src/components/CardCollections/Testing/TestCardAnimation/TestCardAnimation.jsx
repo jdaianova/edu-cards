@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./TestCardAnimation.css";
 import TestingCard from "../TestingCard/TestingCard";
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
+import { ThemeContext } from "../../../ThemeContext";
 
 const TestCardAnimation = ({
   currentcCardInfo,
@@ -11,6 +12,7 @@ const TestCardAnimation = ({
   setCorrectAnswers,
   setInorrectAnswers,
 }) => {
+  const { theme } = useContext(ThemeContext);
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [changeCards, setChangeCards] = useState(false);
@@ -49,17 +51,19 @@ const TestCardAnimation = ({
         // часть с карточками
         <>
           <div className="TestCardAnimation__card-container">
-            {leftDeck > 0 && <div className="left-cards-deck App-dark"></div>}
+            {leftDeck > 0 && (
+              <div className={`left-cards-deck  Cards-${theme}`}></div>
+            )}
             <div
               className={`TestCardAnimation__card card-one ${
-                changeCards ? "animateLeftCard" : ""
+                changeCards ? `animateLeftCard-${theme}` : ""
               }`}
             ></div>
           </div>
           <div className="TestCardAnimation__card-container">
             <div
               className={`TestCardAnimation__card card-two ${
-                changeCards ? "animateCard" : ""
+                changeCards ? `animateCard-${theme}` : ""
               }`}
             >
               {leftDeck > 0 && (
@@ -79,7 +83,7 @@ const TestCardAnimation = ({
           </div>
           <div className="TestCardAnimation__card-container">
             {!(rightDeck === 0) && (
-              <div className="right-cards-deck App-dark"></div>
+              <div className={`right-cards-deck  Cards-${theme}`}></div>
             )}
           </div>
         </>

@@ -45,10 +45,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card-tree {
-    background-color: darkblue;
-}
-
 .TestCardAnimation__card-test-end {
     display: flex;
     flex-direction: column;
@@ -65,7 +61,7 @@
     height: 40px;
 }
 
-@keyframes flipAndMove {
+@keyframes flipAndMoveDark {
     0% {
         transform: rotateY(0) translateX(0);
         width: 250px;
@@ -86,11 +82,7 @@
     }
 }
 
-.animateCard {
-    animation: flipAndMove 1s forwards;
-}
-
-@keyframes flipAndGrow {
+@keyframes flipAndGrowDark {
     0% {
         transform: rotateY(0) translateX(0);
         width: 170px;
@@ -111,6 +103,151 @@
     }
 }
 
-.animateLeftCard {
-    animation: flipAndGrow 1s forwards;
+@keyframes flipAndMoveSea {
+    0% {
+        transform: rotateY(0) translateX(0);
+        width: 250px;
+        height: 300px;
+        background-color: white;
+    }
+
+    50% {
+        transform: rotateY(180deg) translateX(0);
+        background-image: url('../../../../data//img/sea-theme-cards-mirror.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    100% {
+        transform: rotateY(180deg) translateX(-230px);
+        width: 170px;
+        height: 250px;
+        background-image: url('../../../../data//img/sea-theme-cards.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@keyframes flipAndGrowSea {
+    0% {
+        transform: rotateY(0) translateX(0);
+        width: 170px;
+        height: 250px;
+        background-image: url('../../../../data//img/sea-theme-cards.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    50% {
+        transform: rotateY(180deg) translateX(0);
+        background-color: white;
+    }
+
+    100% {
+        transform: rotateY(180deg) translateX(-250px);
+        width: 250px;
+        height: 300px;
+        background-color: white;
+    }
+}
+
+@keyframes flipAndMoveLight {
+    0% {
+        transform: rotateY(0) translateX(0);
+        width: 250px;
+        height: 300px;
+        background-color: white;
+    }
+
+    50% {
+        transform: rotateY(180deg) translateX(0);
+        background-image: url('../../../../data//img/stone-theme-cards.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    100% {
+        transform: rotateY(180deg) translateX(-230px);
+        width: 170px;
+        height: 250px;
+        background-image: url('../../../../data//img/stone-theme-cards.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@keyframes flipAndGrowLight {
+    0% {
+        transform: rotateY(0) translateX(0);
+        width: 170px;
+        height: 250px;
+        background-image: url('../../../../data//img/stone-theme-cards.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    50% {
+        transform: rotateY(180deg) translateX(0);
+        background-color: white;
+    }
+
+    100% {
+        transform: rotateY(180deg) translateX(-250px);
+        width: 250px;
+        height: 300px;
+        background-color: white;
+    }
+}
+
+.animateCard-sea {
+    animation: flipAndMoveSea 1s forwards;
+}
+
+.animateLeftCard-sea {
+    animation: flipAndGrowSea 1s forwards;
+}
+
+.animateCard-dark {
+    animation: flipAndMoveDark 1s forwards;
+}
+
+.animateLeftCard-dark {
+    animation: flipAndGrowDark 1s forwards;
+}
+
+.animateCard-light {
+    animation: flipAndMoveLight 1s forwards;
+}
+
+.animateLeftCard-light {
+    animation: flipAndGrowLight 1s forwards;
+}
+
+
+.Cards-sea {
+    background-image: url('../../../../data//img/sea-theme-cards.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 2px 0px white;
+}
+
+.Cards-light {
+    background-image: url('../../../../data//img/stone-theme-cards.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 2px 0px gray;
+}
+
+.Cards-dark {
+    background: linear-gradient(345deg, rgb(17, 15, 11) 70%, rgb(1, 30, 79) 85%, rgb(7, 51, 117) 90%, rgb(7, 51, 117) 100%);
+    background-size: 100% 500%;
+    box-shadow: 0px 0px 2px 0px white;
 }

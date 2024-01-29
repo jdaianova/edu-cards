@@ -18,4 +18,25 @@ async function loadData() {
 
 loadData();
 
+export async function getSetById(setId) {
+  try {
+    const set = await mySetsUseCards.sets.get({ set_id: setId });
+    if (set) {
+      return set;
+    } else {
+      return null;
+    }
+  } catch (error) {
+    // console.log( error);
+  }
+}
+
+export async function updateSet(updatedSet) {
+  try {
+    await mySetsUseCards.sets.put(updatedSet);
+  } catch (error) {
+    // console.log(error);
+  }
+}
+
 export { readySetsUseCards, mySetsUseCards };

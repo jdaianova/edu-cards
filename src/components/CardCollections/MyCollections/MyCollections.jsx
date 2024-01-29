@@ -15,13 +15,13 @@ const MyCollections = () => {
     setMySets(fetchSets);
   };
 
-  const handleSetDelete = () => {
-    loadMySets(); // Перезагрузка списка после удаления
+  const handleLoadSets = () => {
+    loadMySets();
   };
 
   return (
     <div className="Sets-container">
-      <ShowSets sets={mySets} isReadySets={false} onSetDelete={handleSetDelete} />
+      <ShowSets sets={mySets} isReadySets={false} handleLoadSets={handleLoadSets} />
     </div>
   );
 };

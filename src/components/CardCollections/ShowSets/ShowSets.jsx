@@ -3,7 +3,7 @@ import CardStack from "./CardStack/CardStack";
 import SetFilters from "./SetFilters/SetFilters";
 import { useState } from "react";
 
-const ShowSets = ({ sets, isReadySets, onSetDelete }) => {
+const ShowSets = ({ sets, isReadySets, handleLoadSets }) => {
   const [filterLang, setFilterLang] = useState("all");
   const [filterCategory, setFilterCategory] = useState("all");
 
@@ -38,7 +38,7 @@ const ShowSets = ({ sets, isReadySets, onSetDelete }) => {
             key={set.set_id}
             set={set}
             isReadySets={isReadySets}
-            onSetDelete={onSetDelete}
+            onSetDelete={handleLoadSets}
           />
         ))}
       </div>
