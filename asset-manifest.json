@@ -1,8 +1,12 @@
 {
   "files": {
-    "main.css": "/edu-cards/static/css/main.afbe41fd.css",
-    "main.js": "/edu-cards/static/js/main.a43e69ee.js",
+    "main.css": "/edu-cards/static/css/main.5c3ef586.css",
+    "main.js": "/edu-cards/static/js/main.3b01e0c4.js",
+    "static/media/sea-theme-cards-mirror.png": "/edu-cards/static/media/sea-theme-cards-mirror.237411111dc287e9d39f.png",
+    "static/media/sea-theme-cards.jpg": "/edu-cards/static/media/sea-theme-cards.4ca6ef570b2615384f07.jpg",
+    "static/media/stone-theme.jpg": "/edu-cards/static/media/stone-theme.00e31acb7aa7753cc1f0.jpg",
     "static/media/sea-theme.png": "/edu-cards/static/media/sea-theme.a857c44e9fb2b3c96b79.png",
+    "static/media/stone-theme-cards.jpg": "/edu-cards/static/media/stone-theme-cards.70039a431b4e9cc4bd91.jpg",
     "static/media/cards-home-pic2.png": "/edu-cards/static/media/cards-home-pic2.342980b86a700ee78f4b.png",
     "static/media/sea-theme-mobile.png": "/edu-cards/static/media/sea-theme-mobile.7faf7ca2514123bcd299.png",
     "static/media/roboto-latin-400-italic.woff2": "/edu-cards/static/media/roboto-latin-400-italic.e10742dbb1d4a0864ba8.woff2",
@@ -104,11 +108,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/edu-cards/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/edu-cards/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/edu-cards/index.html",
-    "main.afbe41fd.css.map": "/edu-cards/static/css/main.afbe41fd.css.map",
-    "main.a43e69ee.js.map": "/edu-cards/static/js/main.a43e69ee.js.map"
+    "main.5c3ef586.css.map": "/edu-cards/static/css/main.5c3ef586.css.map",
+    "main.3b01e0c4.js.map": "/edu-cards/static/js/main.3b01e0c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.afbe41fd.css",
-    "static/js/main.a43e69ee.js"
+    "static/css/main.5c3ef586.css",
+    "static/js/main.3b01e0c4.js"
   ]
 }
